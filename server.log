@@ -1,0 +1,1803 @@
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 3.9s
+ ○ Compiling /api/auth/register ...
+ ✓ Compiled /api/auth/register in 902ms (141 modules)
+ POST /api/auth/register 200 in 1725ms
+ ✓ Compiled /src/middleware in 340ms (104 modules)
+ ○ Compiling /[locale]/auth/login ...
+ ✓ Compiled /[locale]/auth/login in 4.9s (851 modules)
+ ✓ Compiled in 492ms (342 modules)
+ ○ Compiling /[locale]/auth/register ...
+ ✓ Compiled /[locale]/auth/register in 948ms (853 modules)
+ POST /api/auth/register 200 in 840ms
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled /api/auth/login in 571ms (520 modules)
+ POST /api/auth/login 200 in 2009ms
+ GET /fr/auth/register 200 in 406ms
+ POST /api/auth/register 200 in 465ms
+ ○ Compiling /[locale]/dashboard ...
+ ✓ Compiled /[locale]/dashboard in 771ms (856 modules)
+ ✓ Compiled /api/homework in 363ms (520 modules)
+ ✓ Compiled (526 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 1066ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 1077ms
+ GET /api/homework?level=1ac&track=idadi 200 in 1092ms
+ GET /api/videos?level=1ac&track=idadi 200 in 1108ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 66ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 78ms
+ GET /api/homework?level=1ac&track=idadi 200 in 88ms
+ GET /api/videos?level=1ac&track=idadi 200 in 98ms
+ ✓ Compiled /api/auth/login in 324ms (518 modules)
+ POST /api/auth/login 401 in 470ms
+ ○ Compiling /[locale]/admin ...
+ ✓ Compiled /[locale]/admin in 1226ms (753 modules)
+ GET /ar/admin 200 in 2885ms
+ ○ Compiling /[locale]/admin/lessons/new ...
+ ✓ Compiled /[locale]/admin/lessons/new in 1272ms (761 modules)
+ GET /ar/admin/lessons/new 200 in 2798ms
+ ○ Compiling /[locale]/admin/videos/new ...
+ ✓ Compiled /[locale]/admin/videos/new in 777ms (769 modules)
+ GET /ar/admin/videos/new 200 in 2193ms
+ ○ Compiling /[locale]/admin/exercises/new ...
+ ✓ Compiled /[locale]/admin/exercises/new in 737ms (775 modules)
+ GET /ar/admin/exercises/new 200 in 2035ms
+ ○ Compiling /[locale]/admin/homework/new ...
+ ✓ Compiled /[locale]/admin/homework/new in 713ms (781 modules)
+ GET /ar/admin/homework/new 200 in 2036ms
+ ✓ Compiled in 2.3s (874 modules)
+ ✓ Compiled /api/seed-content in 417ms (435 modules)
+ GET /api/seed-content 200 in 577ms
+ ○ Compiling /api/lessons ...
+ ✓ Compiled /api/lessons in 551ms (520 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 684ms
+ GET /api/lessons?level=tcsf&track=tawahili 200 in 18ms
+ ✓ Compiled /api/exercises in 207ms (522 modules)
+ GET /api/exercises?level=1ac&track=idadi 200 in 296ms
+ GET /api/exercises?level=tcsf&track=tawahili 200 in 17ms
+ ✓ Compiled /api/homework in 232ms (524 modules)
+ GET /api/homework?level=1ac&track=idadi 200 in 313ms
+ GET /api/homework?level=tcsf&track=tawahili 200 in 23ms
+ ✓ Compiled /api/videos in 465ms (526 modules)
+ GET /api/videos?level=1ac&track=idadi 200 in 569ms
+ GET /api/videos?level=tcsf&track=tawahili 200 in 33ms
+ GET /fr/dashboard 200 in 340ms
+ ○ Compiling /[locale] ...
+ ✓ Compiled /api/homework in 2.8s (899 modules)
+ ✓ Compiled in 1ms (529 modules)
+ ✓ Compiled in 1ms (529 modules)
+ ✓ Compiled in 1ms (529 modules)
+ GET /api/exercises?level=1ac&track=idadi 200 in 2263ms
+ GET /api/videos?level=1ac&track=idadi 200 in 2267ms
+ GET /api/homework?level=1ac&track=idadi 200 in 2267ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 2273ms
+ ✓ Compiled in 1ms (529 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 1832ms
+ GET /api/homework?level=1ac&track=idadi 200 in 1851ms
+ GET /api/videos?level=1ac&track=idadi 200 in 1984ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 2003ms
+ GET /favicon.ico 404 in 5994ms
+ ○ Compiling /[locale]/lessons ...
+ ✓ Compiled /[locale]/lessons in 617ms (899 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 65ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 45ms
+ ○ Compiling /[locale]/lessons/[id] ...
+ ✓ Compiled /[locale]/lessons/[id] in 546ms (907 modules)
+ ✓ Compiled /api/lessons/[id] in 363ms (544 modules)
+ GET /api/lessons/mryar1143it8erk3m 200 in 1352ms
+ GET /api/lessons/mryar1143it8erk3m 200 in 58ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 32ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 27ms
+ GET /api/lessons/mryar1143it8erk3m 200 in 39ms
+ GET /api/lessons/mryar1143it8erk3m 200 in 34ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 26ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 32ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 69ms
+ GET /api/videos?level=1ac&track=idadi 200 in 86ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 101ms
+ GET /api/homework?level=1ac&track=idadi 200 in 113ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 91ms
+ GET /api/videos?level=1ac&track=idadi 200 in 50ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 56ms
+ GET /api/homework?level=1ac&track=idadi 200 in 63ms
+ ✓ Compiled /[locale]/videos in 504ms (919 modules)
+ GET /api/videos?level=1ac&track=idadi 200 in 70ms
+ GET /api/videos?level=1ac&track=idadi 200 in 76ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 57ms
+ GET /api/homework?level=1ac&track=idadi 200 in 81ms
+ GET /api/videos?level=1ac&track=idadi 200 in 99ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 116ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 143ms
+ GET /api/homework?level=1ac&track=idadi 200 in 93ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 102ms
+ GET /api/videos?level=1ac&track=idadi 200 in 109ms
+ ○ Compiling /[locale]/exercises ...
+ ✓ Compiled /[locale]/exercises in 538ms (927 modules)
+ GET /api/exercises?level=1ac&track=idadi 200 in 72ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 51ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 89ms
+ GET /api/videos?level=1ac&track=idadi 200 in 90ms
+ GET /api/homework?level=1ac&track=idadi 200 in 101ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 117ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 76ms
+ GET /api/videos?level=1ac&track=idadi 200 in 60ms
+ GET /api/homework?level=1ac&track=idadi 200 in 61ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 66ms
+ ○ Compiling /[locale]/homework ...
+ ✓ Compiled /[locale]/homework in 643ms (925 modules)
+ GET /api/homework?level=1ac&track=idadi 200 in 83ms
+ GET /api/homework?level=1ac&track=idadi 200 in 44ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 55ms
+ GET /api/videos?level=1ac&track=idadi 200 in 76ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 85ms
+ GET /api/homework?level=1ac&track=idadi 200 in 93ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 84ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 47ms
+ GET /api/homework?level=1ac&track=idadi 200 in 53ms
+ GET /api/videos?level=1ac&track=idadi 200 in 61ms
+ ✓ Compiled /api/auth/login in 353ms (548 modules)
+ POST /api/auth/login 401 in 412ms
+ POST /api/auth/login 401 in 31ms
+ ✓ Compiled /[locale]/auth/login in 185ms (549 modules)
+ ✓ Compiled /[locale] in 167ms (556 modules)
+ POST /api/auth/login 401 in 30ms
+ POST /api/auth/login 401 in 19ms
+ POST /api/auth/login 200 in 534ms
+ POST /api/auth/login 200 in 451ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 88ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 100ms
+ GET /api/homework?level=1ac&track=idadi 200 in 113ms
+ GET /api/videos?level=1ac&track=idadi 200 in 140ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 124ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 68ms
+ GET /api/homework?level=1ac&track=idadi 200 in 77ms
+ GET /api/videos?level=1ac&track=idadi 200 in 86ms
+ GET /fr/dashboard 200 in 247ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 85ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 129ms
+ GET /api/homework?level=1ac&track=idadi 200 in 140ms
+ GET /api/videos?level=1ac&track=idadi 200 in 155ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 122ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 91ms
+ GET /api/homework?level=1ac&track=idadi 200 in 100ms
+ GET /api/videos?level=1ac&track=idadi 200 in 115ms
+ ✓ Compiled /api/homework in 2.3s (810 modules)
+ ✓ Compiled in 2ms (540 modules)
+ GET /api/videos?level=1ac&track=idadi 200 in 2017ms
+ GET /api/videos? 200 in 1448ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 1993ms
+ GET /api/exercises? 200 in 1465ms
+ GET /api/lessons? 200 in 1499ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 2070ms
+ GET /api/homework?level=1ac&track=idadi 200 in 1949ms
+ GET /api/homework? 200 in 1510ms
+ ✓ Compiled in 871ms (391 modules)
+ GET /fr/dashboard 200 in 204ms
+ GET /api/lessons? 200 in 158ms
+ GET /api/videos? 200 in 88ms
+ GET /api/exercises? 200 in 97ms
+ GET /api/homework? 200 in 104ms
+ GET /api/lessons? 200 in 96ms
+ GET /api/videos? 200 in 78ms
+ GET /api/exercises? 200 in 83ms
+ GET /api/homework? 200 in 79ms
+ ✓ Compiled /[locale]/lessons in 403ms (546 modules)
+ GET /api/lessons 200 in 99ms
+ GET /api/lessons 200 in 69ms
+ ✓ Compiled in 717ms (932 modules)
+ ✓ Compiled in 2.7s (932 modules)
+ ✓ Compiled in 1ms (541 modules)
+ ✓ Compiled in 1ms (541 modules)
+ ✓ Compiled in 0ms (541 modules)
+ GET /api/videos? 200 in 2631ms
+ GET /api/homework? 200 in 2629ms
+ GET /api/exercises? 200 in 2629ms
+ GET /api/lessons? 200 in 2634ms
+ ✓ Compiled in 1ms (541 modules)
+ GET /api/lessons 200 in 1118ms
+ GET /api/lessons? 200 in 746ms
+ GET /api/videos? 200 in 759ms
+ GET /api/homework? 200 in 772ms
+ GET /api/exercises? 200 in 785ms
+ GET /api/lessons 200 in 81ms
+ ○ Compiling /[locale]/lessons/[id] ...
+ ✓ Compiled /[locale]/lessons/[id] in 609ms (546 modules)
+ ✓ Compiled /api/lessons/[id] in 408ms (548 modules)
+ GET /api/lessons/mryar10zmli6fds7l 200 in 529ms
+ GET /api/lessons/mryar10zmli6fds7l 200 in 43ms
+ GET /api/lessons 200 in 30ms
+ GET /api/lessons 200 in 34ms
+ GET /ar/dashboard 200 in 400ms
+ GET /api/lessons? 200 in 60ms
+ GET /api/homework? 200 in 79ms
+ GET /api/videos? 200 in 92ms
+ GET /api/exercises? 200 in 105ms
+ GET /api/lessons? 200 in 93ms
+ GET /api/homework? 200 in 63ms
+ GET /api/videos? 200 in 74ms
+ GET /api/exercises? 200 in 80ms
+ GET /ar/lessons 200 in 110ms
+ GET /ar/videos 200 in 125ms
+ GET /ar/exercises 200 in 123ms
+ GET /ar/homework 200 in 132ms
+ GET /fr/dashboard 200 in 114ms
+ GET /api/lessons? 200 in 103ms
+ GET /api/exercises? 200 in 115ms
+ GET /api/homework? 200 in 125ms
+ GET /api/videos? 200 in 136ms
+ GET /api/lessons? 200 in 95ms
+ GET /api/homework? 200 in 68ms
+ GET /api/exercises? 200 in 77ms
+ GET /api/videos? 200 in 83ms
+ ○ Compiling /[locale]/admin ...
+ ✓ Compiled /[locale]/admin in 709ms (555 modules)
+ ✓ Compiled /[locale]/admin/lessons/new in 222ms (560 modules)
+ POST /api/lessons 201 in 92ms
+ ○ Compiling /[locale]/admin/lessons ...
+ ✓ Compiled /[locale]/admin/lessons in 1127ms (918 modules)
+ GET /api/lessons 200 in 107ms
+ GET /api/lessons 200 in 26ms
+ ✓ Compiled /api/lessons/[id] in 202ms (539 modules)
+ DELETE /api/lessons/mryar10zmli6fds7l 200 in 291ms
+ DELETE /api/lessons/mryar116ql3u9e90r 200 in 37ms
+ DELETE /api/lessons/mryar112iigmpjrnf 200 in 34ms
+ DELETE /api/lessons/mryar118thdabphw6 200 in 51ms
+ DELETE /api/lessons/mryar1143it8erk3m 200 in 39ms
+ DELETE /api/lessons/mryar11aitdxqkxfl 200 in 41ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 42ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 44ms
+ GET /api/lessons/mryb9qftc5qmuceq6 200 in 55ms
+ GET /api/lessons/mryb9qftc5qmuceq6 200 in 44ms
+ ✓ Compiled in 637ms (415 modules)
+ ✓ Compiled in 347ms (415 modules)
+ ✓ Compiled in 815ms (395 modules)
+ ✓ Compiled in 572ms (395 modules)
+ ✓ Compiled in 441ms (395 modules)
+ ✓ Compiled in 410ms (395 modules)
+ ✓ Compiled in 1857ms (900 modules)
+ ✓ Compiled in 6.4s (1360 modules)
+ ✓ Compiled in 3.3s (1362 modules)
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 1312ms (811 modules)
+ GET /fr/lessons/mryb9qftc5qmuceq6 200 in 1722ms
+ GET /api/lessons/mryb9qftc5qmuceq6 200 in 48ms
+ GET /api/lessons/mryb9qftc5qmuceq6 200 in 33ms
+ ✓ Compiled in 1431ms (1476 modules)
+ GET /ar/admin/lessons/new 200 in 364ms
+ ○ Compiling /[locale]/lessons ...
+ ✓ Compiled /[locale]/lessons in 1131ms (818 modules)
+ GET /ar/lessons 200 in 1366ms
+ GET /ar/lessons/1ac 200 in 213ms
+ ✓ Compiled in 1555ms (665 modules)
+ ○ Compiling /api/lessons ...
+ ✓ Compiled /api/lessons in 675ms (818 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 843ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 50ms
+ ○ Compiling /api/homework ...
+ ✓ Compiled /api/homework in 967ms (820 modules)
+ ✓ Compiled (824 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 1965ms
+ GET /api/videos?level=1ac&track=idadi 200 in 1984ms
+ GET /api/homework?level=1ac&track=idadi 200 in 1995ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 2013ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 138ms
+ GET /api/videos?level=1ac&track=idadi 200 in 145ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 166ms
+ GET /api/homework?level=1ac&track=idadi 200 in 181ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 33ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 42ms
+ ✓ Compiled /api/lessons/[id] in 383ms (826 modules)
+ GET /api/lessons/mryb9qftc5qmuceq6 200 in 475ms
+ GET /api/lessons/mryb9qftc5qmuceq6 200 in 36ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 27ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 26ms
+ ✓ Compiled in 832ms (665 modules)
+ ✓ Compiled in 647ms (665 modules)
+ ✓ Compiled in 586ms (665 modules)
+ ✓ Compiled in 418ms (665 modules)
+ GET /ar/admin/lessons/new 200 in 292ms
+ ○ Compiling /[locale]/admin/exercises/new ...
+ ✓ Compiled /[locale]/admin/exercises/new in 918ms (824 modules)
+ GET /ar/admin/exercises/new 200 in 1256ms
+ ✓ Compiled /[locale]/admin/homework/new in 481ms (828 modules)
+ GET /ar/admin/homework/new 200 in 739ms
+ GET /api/lessons/mryb9qftc5qmuceq6 200 in 92ms
+ GET /api/lessons/mryb9qftc5qmuceq6 200 in 34ms
+ GET /api/lessons 200 in 34ms
+ GET /api/lessons 200 in 30ms
+ POST /api/lessons 201 in 38ms
+ GET /api/lessons 200 in 37ms
+ GET /api/lessons 200 in 37ms
+ DELETE /api/lessons/mryb9qftc5qmuceq6 200 in 42ms
+ ✓ Compiled in 5s (1366 modules)
+ ✓ Compiled in 2.8s (1366 modules)
+ ✓ Compiled in 1010ms (666 modules)
+ GET /ar/admin/lessons/new 200 in 450ms
+ ○ Compiling /api/upload ...
+ ✓ Compiled /api/upload in 860ms (814 modules)
+ POST /api/upload 201 in 1180ms
+ ✓ Compiled in 2.6s (1366 modules)
+ ✓ Compiled in 1481ms (1366 modules)
+ ✓ Compiled in 1806ms (1366 modules)
+ ✓ Compiled in 1717ms (1366 modules)
+ GET /ar/admin/lessons/new 200 in 434ms
+ ✓ Compiled in 1343ms (1366 modules)
+ ✓ Compiled in 2.1s (1368 modules)
+ GET /ar/admin/lessons/new 200 in 335ms
+ ○ Compiling /api/lessons ...
+ ✓ Compiled /api/lessons in 655ms (815 modules)
+ POST /api/lessons 201 in 803ms
+ GET /api/lessons 200 in 49ms
+ GET /api/lessons 200 in 38ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 39ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 37ms
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 631ms (817 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 782ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 53ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 33ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 23ms
+ GET /api/lessons 200 in 31ms
+ GET /api/lessons 200 in 34ms
+ GET /ar/lessons 200 in 218ms
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 1280ms (822 modules)
+ GET /favicon.ico 404 in 1622ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 133ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 108ms
+ ✓ Compiled /api/lessons/[id] in 366ms (824 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 471ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 30ms
+ GET /fr/lessons/mrydfai0o0ljke1ft 200 in 186ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 50ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 36ms
+ ✓ Compiled in 1358ms (667 modules)
+ ✓ Compiled in 1399ms (1491 modules)
+ ✓ Compiled in 0ms (824 modules)
+ ✓ Compiled in 1ms (824 modules)
+ ✓ Compiled in 1ms (824 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 1806ms
+ ✓ Compiled in 0ms (824 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 2019ms
+ GET /fr/admin/lessons 200 in 403ms
+ GET /api/lessons 200 in 117ms
+ GET /api/lessons 200 in 54ms
+ ✓ Compiled in 2.3s (1486 modules)
+ ✓ Compiled in 0ms (818 modules)
+ ✓ Compiled in 0ms (818 modules)
+ ✓ Compiled in 1ms (818 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 2552ms
+ ✓ Compiled in 1042ms (1486 modules)
+ ✓ Compiled in 1ms (818 modules)
+ ✓ Compiled in 1ms (818 modules)
+ ✓ Compiled in 0ms (818 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 1566ms
+ ✓ Compiled in 1424ms (1486 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 167ms
+ GET /ar/admin/lessons/new 200 in 473ms
+ GET /ar/lessons 200 in 139ms
+ GET /api/lessons?level=1ac 200 in 66ms
+ ○ Compiling /[locale]/admin/lessons/[id]/edit ...
+ ⚠ ./src/app/[locale]/admin/lessons/[id]/edit/page.tsx
+Attempted import error: 'useParams' is not exported from '@/i18n/navigation' (imported as 'useParams').
+
+Import trace for requested module:
+./src/app/[locale]/admin/lessons/[id]/edit/page.tsx
+
+./src/app/[locale]/admin/lessons/[id]/edit/page.tsx
+Attempted import error: 'useParams' is not exported from '@/i18n/navigation' (imported as 'useParams').
+
+Import trace for requested module:
+./src/app/[locale]/admin/lessons/[id]/edit/page.tsx
+
+./src/app/[locale]/admin/lessons/[id]/edit/page.tsx
+Attempted import error: 'useParams' is not exported from '@/i18n/navigation' (imported as 'useParams').
+
+Import trace for requested module:
+./src/app/[locale]/admin/lessons/[id]/edit/page.tsx
+ ⨯ src\app\[locale]\admin\lessons\[id]\edit\page.tsx (13:27) @ useParams
+ ⨯ TypeError: (0 , _i18n_navigation__WEBPACK_IMPORTED_MODULE_2__.useParams) is not a function
+    at EditLessonPage (./src/app/[locale]/admin/lessons/[id]/edit/page.tsx:30:79)
+digest: "2466592195"
+[0m [90m 11 |[39m   [36mconst[39m t [33m=[39m useTranslations()[33m;[39m[0m
+[0m [90m 12 |[39m   [36mconst[39m router [33m=[39m useRouter()[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 13 |[39m   [36mconst[39m params [33m=[39m useParams()[33m;[39m[0m
+[0m [90m    |[39m                           [31m[1m^[22m[39m[0m
+[0m [90m 14 |[39m   [36mconst[39m pdfInputRef [33m=[39m useRef[33m<[39m[33mHTMLInputElement[39m[33m>[39m([36mnull[39m)[33m;[39m[0m
+[0m [90m 15 |[39m   [36mconst[39m [loading[33m,[39m setLoading] [33m=[39m useState([36mtrue[39m)[33m;[39m[0m
+[0m [90m 16 |[39m   [36mconst[39m [saving[33m,[39m setSaving] [33m=[39m useState([36mfalse[39m)[33m;[39m[0m
+ GET /ar/admin/lessons/mrydfai0o0ljke1ft/edit 500 in 8148ms
+ ✓ Compiled /[locale]/admin/lessons/[id]/edit in 2.8s (1496 modules)
+ GET /api/lessons?level=1ac 200 in 67ms
+ GET /ar/admin/lessons/mrydfai0o0ljke1ft/edit 200 in 178ms
+ GET /api/lessons 200 in 33ms
+ GET /api/lessons 200 in 31ms
+ GET /fr/admin/lessons 200 in 116ms
+ GET /api/lessons 200 in 59ms
+ GET /api/lessons 200 in 43ms
+ ✓ Compiled /api/lessons in 1868ms (1375 modules)
+ ✓ Compiled in 1ms (816 modules)
+ GET /api/lessons 200 in 1221ms
+ ✓ Compiled in 879ms (673 modules)
+ ✓ Compiled in 526ms (673 modules)
+ ✓ Compiled /[locale]/admin/lessons/[id]/edit in 464ms (823 modules)
+ ✓ Compiled in 819ms (673 modules)
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 1133ms (825 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 1914ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 284ms
+ ✓ Compiled in 536ms (673 modules)
+ ✓ Compiled in 351ms (673 modules)
+ ✓ Compiled in 502ms (673 modules)
+ PUT /api/lessons/mrydfai0o0ljke1ft 200 in 52ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 37ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 75ms
+ GET /api/lessons 200 in 64ms
+ GET /api/lessons 200 in 41ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 53ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 35ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 42ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 150ms
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 1719ms (1499 modules)
+ GET /ar 200 in 286ms
+ ✓ Compiled in 628ms (673 modules)
+ GET /fr 200 in 95ms
+ ✓ Compiled /[locale]/auth/login in 464ms (713 modules)
+ GET /ar/admin/lessons 200 in 251ms
+ ○ Compiling /[locale]/admin/exercises ...
+ ✓ Compiled /[locale]/admin/exercises in 1378ms (1392 modules)
+ GET /ar/admin/exercises 200 in 3522ms
+ ○ Compiling /[locale]/admin/homework ...
+ ✓ Compiled /[locale]/admin/homework in 1181ms (1384 modules)
+ GET /fr/auth/login 200 in 313ms
+ GET /ar/admin/homework 200 in 2487ms
+ ○ Compiling /api/lessons ...
+ ✓ Compiled /api/lessons in 550ms (835 modules)
+ GET /api/lessons 200 in 806ms
+ GET /ar/admin/lessons/mryckebf0otej4rzc/edit 200 in 394ms
+ ○ Compiling /api/exercises ...
+ ✓ Compiled /api/exercises in 863ms (837 modules)
+ GET /api/exercises 200 in 998ms
+ ○ Compiling /[locale]/admin/exercises/[id]/edit ...
+ ✓ Compiled /[locale]/admin/exercises/[id]/edit in 2.2s (1508 modules)
+ GET /lessons 404 in 2085ms
+ GET /ar/admin/exercises/mryar11e0p8j5hri0/edit 200 in 3944ms
+ GET /fr/auth/login 200 in 100ms
+ GET /favicon.ico 404 in 105ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 64ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 37ms
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 821ms (844 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 940ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 29ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 41ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 31ms
+ PUT /api/lessons/mryckebf0otej4rzc 200 in 58ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 95ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 69ms
+ GET /api/lessons 200 in 34ms
+ GET /api/lessons 200 in 51ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 50ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 32ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 49ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 41ms
+ PUT /api/lessons/mrydfai0o0ljke1ft 200 in 42ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 34ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 29ms
+ GET /api/lessons 200 in 42ms
+ GET /api/lessons 200 in 53ms
+ GET /fr/lessons 200 in 312ms
+ GET /favicon.ico 404 in 134ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 46ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 35ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 51ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 56ms
+ ✓ Compiled in 671ms (707 modules)
+ ✓ Compiled in 3.2s (1477 modules)
+ ○ Compiling /[locale]/admin ...
+ ✓ Compiled /[locale]/admin in 1271ms (714 modules)
+ ✓ Compiled in 813ms (680 modules)
+ ✓ Compiled in 1625ms (1463 modules)
+ ✓ Compiled in 1098ms (680 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 2.7s (1373 modules)
+ GET /fr/lessons/mrydfai0o0ljke1ft 200 in 664ms
+ GET /favicon.ico 404 in 241ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 3s (1373 modules)
+ ✓ Compiled in 1ms (693 modules)
+ ✓ Compiled in 1ms (693 modules)
+ ✓ Compiled in 1ms (693 modules)
+ GET /fr/lessons/mrydfai0o0ljke1ft 200 in 3380ms
+ GET /favicon.ico 404 in 594ms
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 2s (807 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 2374ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 999ms (809 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 2056ms
+ POST /api/progress 201 in 2617ms
+ POST /api/progress 200 in 621ms
+ ✓ Compiled in 2.6s (1491 modules)
+ ✓ Compiled in 1473ms (681 modules)
+ ✓ Compiled in 1127ms (681 modules)
+ ✓ Compiled in 803ms (681 modules)
+ ○ Compiling /[locale]/admin/students ...
+ ✓ Compiled /[locale]/admin/students in 2s (1369 modules)
+ GET /fr/admin/students 200 in 3499ms
+ ○ Compiling /[locale]/admin/students/[id] ...
+ ✓ Compiled /[locale]/admin/students/[id] in 1275ms (1378 modules)
+ GET /fr/admin/students/test-id 200 in 2971ms
+ ○ Compiling /[locale]/exercises ...
+ ✓ Compiled /[locale]/exercises in 674ms (710 modules)
+ GET /fr/exercises 200 in 1140ms
+ ○ Compiling /[locale]/homework ...
+ ✓ Compiled /[locale]/homework in 926ms (717 modules)
+ GET /fr/homework 200 in 1266ms
+ ○ Compiling /[locale]/videos ...
+ ✓ Compiled /[locale]/videos in 991ms (723 modules)
+ GET /fr/videos 200 in 1349ms
+ GET /fr/admin 200 in 76ms
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 1022ms (837 modules)
+ GET /api/users 200 in 1210ms
+ GET /api/users 200 in 51ms
+ ✓ Compiled /api/progress in 294ms (839 modules)
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 460ms
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 40ms
+ ○ Compiling /api/users/[id] ...
+ ✓ Compiled /api/users/[id] in 551ms (835 modules)
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 1281ms
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 59ms
+ GET /api/users/mryacpf0ekwbbjcp8 200 in 2320ms
+ GET /api/users/mryacpf0ekwbbjcp8 200 in 111ms
+ GET /fr/admin 200 in 268ms
+ GET /fr/admin 200 in 152ms
+ GET /api/users 200 in 37ms
+ GET /api/users 200 in 62ms
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 66ms
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 44ms
+ ✓ Compiled in 1305ms (1378 modules)
+ ✓ Compiled /api/users in 1862ms (1378 modules)
+ ✓ Compiled in 1ms (805 modules)
+ GET /api/users 200 in 1938ms
+ GET /api/users 200 in 389ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 1233ms (807 modules)
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 1583ms
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 41ms
+ ✓ Compiled in 789ms (1494 modules)
+ ✓ Compiled in 617ms (1494 modules)
+ ✓ Compiled in 639ms (1494 modules)
+ GET /api/users 200 in 43ms
+ GET /api/users 200 in 45ms
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 55ms
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 43ms
+ ✓ Compiled in 1488ms (1494 modules)
+ ✓ Compiled in 1037ms (1494 modules)
+ GET /fr/admin/students 200 in 347ms
+ GET /fr/admin/students/test-id 200 in 147ms
+ GET /api/users 200 in 61ms
+ GET /api/users 200 in 77ms
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 79ms
+ GET /api/progress?userId=mryacpf0ekwbbjcp8 200 in 46ms
+ ○ Compiling /api/users/[id] ...
+ ✓ Compiled /api/users/[id] in 546ms (809 modules)
+ DELETE /api/users/mryacpf0ekwbbjcp8 200 in 665ms
+ GET /fr/lessons/mrydfai0o0ljke1ft 200 in 361ms
+ ○ Compiling /[locale] ...
+ ✓ Compiled /api/lessons/[id] in 1234ms (816 modules)
+ ✓ Compiled (818 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 768ms
+ GET /favicon.ico 404 in 2183ms
+ POST /api/progress 200 in 357ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 360ms
+ POST /api/progress 200 in 99ms
+ ✓ Compiled /[locale]/lessons in 345ms (823 modules)
+ ✓ Compiled /api/lessons in 508ms (825 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 625ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 87ms
+ ✓ Compiled /api/auth/logout in 424ms (818 modules)
+ POST /api/auth/logout 200 in 474ms
+ ✓ Compiled /[locale]/auth/login in 317ms (827 modules)
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 1001ms (829 modules)
+ GET /api/users 200 in 1108ms
+ GET /api/users 200 in 31ms
+ ✓ Compiled /[locale]/auth/register in 505ms (834 modules)
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled /api/auth/login in 587ms (831 modules)
+ POST /api/auth/login 401 in 674ms
+ ✓ Compiled /api/auth/register in 282ms (809 modules)
+ POST /api/auth/register 200 in 889ms
+ ○ Compiling /[locale]/dashboard ...
+ ✓ Compiled /[locale]/dashboard in 846ms (814 modules)
+ ○ Compiling /api/videos ...
+ ✓ Compiled /api/videos in 538ms (816 modules)
+ ✓ Compiled in 1ms (822 modules)
+ ✓ Compiled in 1ms (822 modules)
+ ✓ Compiled in 1ms (822 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 1881ms
+ ✓ Compiled in 1ms (822 modules)
+ GET /api/homework?level=1ac&track=idadi 200 in 2383ms
+ GET /api/videos?level=1ac&track=idadi 200 in 2384ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 2383ms
+ ✓ Compiled in 1ms (822 modules)
+ ✓ Compiled in 12ms (822 modules)
+ ✓ Compiled in 1ms (822 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 3094ms
+ GET /api/homework?level=1ac&track=idadi 200 in 2736ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 2737ms
+ GET /api/videos?level=1ac&track=idadi 200 in 2737ms
+ ✓ Compiled in 0ms (822 modules)
+ GET /fr/dashboard 200 in 1715ms
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 752ms (827 modules)
+ GET /favicon.ico 404 in 998ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 1026ms
+ GET /api/homework?level=1ac&track=idadi 200 in 1237ms
+ GET /api/videos?level=1ac&track=idadi 200 in 1280ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 1274ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 302ms
+ GET /api/videos?level=1ac&track=idadi 200 in 90ms
+ GET /api/homework?level=1ac&track=idadi 200 in 102ms
+ GET /api/exercises?level=1ac&track=idadi 200 in 108ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 48ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 43ms
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 1048ms (827 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 1147ms
+ ✓ Compiled /api/progress in 455ms (829 modules)
+ POST /api/progress 201 in 1063ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 1069ms
+ POST /api/progress 200 in 34ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 29ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 31ms
+ ○ Compiling /[locale]/admin ...
+ ✓ Compiled /[locale]/admin in 747ms (836 modules)
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 989ms (833 modules)
+ GET /api/users 200 in 1083ms
+ GET /api/users 200 in 68ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 61ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 30ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 69ms
+ POST /api/progress 200 in 53ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 65ms
+ POST /api/progress 200 in 54ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 46ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 44ms
+ GET /ar/lessons 200 in 233ms
+ GET /favicon.ico 404 in 104ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 50ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 37ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 53ms
+ POST /api/progress 200 in 81ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 94ms
+ POST /api/progress 200 in 61ms
+ GET /fr/lessons/mrydfai0o0ljke1ft 200 in 197ms
+ GET /favicon.ico 404 in 85ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 310ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 79ms
+ POST /api/progress 200 in 113ms
+ POST /api/progress 200 in 134ms
+ ✓ Compiled in 1892ms (1595 modules)
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 4.3s (1586 modules)
+ GET /api/users 200 in 3866ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 183ms
+ GET /admin/students 404 in 355ms
+ ✓ Compiled in 812ms (805 modules)
+ GET /admin/students 404 in 92ms
+ GET /admin/students 404 in 104ms
+ GET /admin 404 in 150ms
+ ✓ Compiled in 1007ms (1494 modules)
+ GET /admin 404 in 356ms
+ GET /admin 404 in 297ms
+ ✓ Compiled in 1162ms (1494 modules)
+ GET /admin 404 in 263ms
+ ✓ Compiled in 4.6s (1492 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ src\components\layout\Navbar.tsx (103:18) @ Globe
+ ⨯ ReferenceError: Globe is not defined
+    at Navbar (./src/components/layout/Navbar.tsx:189:125)
+digest: "2203130348"
+[0m [90m 101 |[39m                 className[33m=[39m[32m"flex items-center gap-1 px-3 py-2 rounded-lg text-sm hover:bg-white/10 transition-colors"[39m[0m
+[0m [90m 102 |[39m               [33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 103 |[39m                 [33m<[39m[33mGlobe[39m size[33m=[39m{[35m18[39m} [33m/[39m[33m>[39m[0m
+[0m [90m     |[39m                  [31m[1m^[22m[39m[0m
+[0m [90m 104 |[39m                 {locale [33m===[39m [32m'ar'[39m [33m?[39m [32m'عربي'[39m [33m:[39m [32m'FR'[39m}[0m
+[0m [90m 105 |[39m               [33m<[39m[33m/[39m[33mbutton[39m[33m>[39m[0m
+[0m [90m 106 |[39m               {isLangMenuOpen [33m&&[39m ([0m
+ GET / 500 in 434ms
+ GET /favicon.ico 404 in 180ms
+ GET /admin 404 in 178ms
+ ✓ Compiled in 1532ms (1490 modules)
+ ⨯ src\components\layout\Navbar.tsx (102:18) @ Globe
+ ⨯ ReferenceError: Globe is not defined
+    at Navbar (./src/components/layout/Navbar.tsx:188:125)
+digest: "872710221"
+[0m [90m 100 |[39m                 className[33m=[39m[32m"flex items-center gap-1 px-3 py-2 rounded-lg text-sm hover:bg-white/10 transition-colors"[39m[0m
+[0m [90m 101 |[39m               [33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 102 |[39m                 [33m<[39m[33mGlobe[39m size[33m=[39m{[35m18[39m} [33m/[39m[33m>[39m[0m
+[0m [90m     |[39m                  [31m[1m^[22m[39m[0m
+[0m [90m 103 |[39m                 {locale [33m===[39m [32m'ar'[39m [33m?[39m [32m'عربي'[39m [33m:[39m [32m'FR'[39m}[0m
+[0m [90m 104 |[39m               [33m<[39m[33m/[39m[33mbutton[39m[33m>[39m[0m
+[0m [90m 105 |[39m               {isLangMenuOpen [33m&&[39m ([0m
+ GET / 500 in 332ms
+ ✓ Compiled in 632ms (1490 modules)
+ ⨯ src\components\layout\Navbar.tsx (94:18) @ Globe
+ ⨯ ReferenceError: Globe is not defined
+    at Navbar (./src/components/layout/Navbar.tsx:179:125)
+digest: "2875153443"
+[0m [90m 92 |[39m                 className[33m=[39m[32m"flex items-center gap-1 px-3 py-2 rounded-lg text-sm hover:bg-white/10 transition-colors"[39m[0m
+[0m [90m 93 |[39m               [33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 94 |[39m                 [33m<[39m[33mGlobe[39m size[33m=[39m{[35m18[39m} [33m/[39m[33m>[39m[0m
+[0m [90m    |[39m                  [31m[1m^[22m[39m[0m
+[0m [90m 95 |[39m                 {locale [33m===[39m [32m'ar'[39m [33m?[39m [32m'عربي'[39m [33m:[39m [32m'FR'[39m}[0m
+[0m [90m 96 |[39m               [33m<[39m[33m/[39m[33mbutton[39m[33m>[39m[0m
+[0m [90m 97 |[39m               {isLangMenuOpen [33m&&[39m ([0m
+ GET /admin 404 in 237ms
+ GET / 500 in 292ms
+ GET /favicon.ico 404 in 123ms
+ ✓ Compiled in 883ms (1490 modules)
+ ⨯ src\components\layout\Navbar.tsx (94:18) @ Globe
+ ⨯ ReferenceError: Globe is not defined
+    at Navbar (./src/components/layout/Navbar.tsx:179:125)
+digest: "2875153443"
+[0m [90m 92 |[39m                 className[33m=[39m[32m"flex items-center gap-1 px-3 py-2 rounded-lg text-sm hover:bg-white/10 transition-colors"[39m[0m
+[0m [90m 93 |[39m               [33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 94 |[39m                 [33m<[39m[33mGlobe[39m size[33m=[39m{[35m18[39m} [33m/[39m[33m>[39m[0m
+[0m [90m    |[39m                  [31m[1m^[22m[39m[0m
+[0m [90m 95 |[39m                 {locale [33m===[39m [32m'ar'[39m [33m?[39m [32m'عربي'[39m [33m:[39m [32m'FR'[39m}[0m
+[0m [90m 96 |[39m               [33m<[39m[33m/[39m[33mbutton[39m[33m>[39m[0m
+[0m [90m 97 |[39m               {isLangMenuOpen [33m&&[39m ([0m
+ GET /admin 404 in 334ms
+ GET / 500 in 351ms
+ GET /favicon.ico 404 in 83ms
+ ✓ Compiled in 936ms (1490 modules)
+ GET /admin 404 in 317ms
+ GET / 200 in 325ms
+ GET /favicon.ico 404 in 300ms
+ ✓ Compiled in 654ms (1374 modules)
+ GET /admin 404 in 387ms
+ GET / 200 in 122ms
+ GET /auth/login 404 in 67ms
+ GET /dashboard 404 in 63ms
+ GET /auth/login 404 in 44ms
+ ✓ Compiled in 151ms (104 modules)
+ GET / 200 in 95ms
+ ○ Compiling /[locale]/auth/login ...
+ ✓ Compiled /[locale]/auth/login in 730ms (695 modules)
+ GET /auth/login 200 in 1171ms
+ ○ Compiling /[locale]/admin ...
+ ✓ Compiled /[locale]/admin in 874ms (702 modules)
+ ✓ Compiled in 1ms (702 modules)
+ ✓ Compiled in 1ms (702 modules)
+ ✓ Compiled in 1ms (702 modules)
+ GET /admin 200 in 1750ms
+ ✓ Compiled in 2ms (702 modules)
+ GET /dashboard 200 in 2846ms
+ GET /api/users 404 in 105ms
+ GET /api/users 404 in 57ms
+ GET /admin 200 in 87ms
+ GET /lessons 200 in 96ms
+ GET /admin/students 200 in 98ms
+ GET /api/users 404 in 75ms
+ GET /api/users 404 in 65ms
+ GET /admin/students 200 in 182ms
+ GET /api/users 404 in 65ms
+ GET /api/users 404 in 37ms
+ ○ Compiling /[locale]/admin/lessons ...
+ ✓ Compiled /[locale]/admin/lessons in 1323ms (707 modules)
+ GET /api/lessons 404 in 226ms
+ GET /api/lessons 404 in 60ms
+ GET /lessons 200 in 169ms
+ GET /api/users 404 in 79ms
+ GET /api/users 404 in 26ms
+ ✓ Compiled in 1309ms (1116 modules)
+ GET /api/lessons?level=1ac&track=idadi 404 in 399ms
+ GET /api/lessons?level=1ac&track=idadi 404 in 211ms
+ ✓ Compiled in 909ms (686 modules)
+ ✓ Compiled in 1089ms (686 modules)
+ ✓ Compiled in 1334ms (686 modules)
+ ✓ Compiled in 1137ms (686 modules)
+ ✓ Compiled in 742ms (686 modules)
+ ✓ Compiled in 964ms (1104 modules)
+ ✓ Compiled in 2.7s (1104 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 3.4s (1107 modules)
+ ✓ Compiled in 949ms (688 modules)
+ GET / 200 in 369ms
+ ✓ Compiled in 1324ms (688 modules)
+ GET /favicon.ico 404 in 832ms
+ ✓ Compiled in 1088ms (688 modules)
+ ✓ Compiled in 1046ms (688 modules)
+ ✓ Compiled in 1167ms (688 modules)
+ ✓ Compiled in 674ms (688 modules)
+ ✓ Compiled in 645ms (688 modules)
+ ✓ Compiled in 1288ms (688 modules)
+ ✓ Compiled in 743ms (688 modules)
+ ✓ Compiled in 746ms (688 modules)
+ ✓ Compiled in 522ms (688 modules)
+ ✓ Compiled in 466ms (688 modules)
+ ✓ Compiled in 517ms (688 modules)
+ ✓ Compiled in 940ms (688 modules)
+ ✓ Compiled in 851ms (688 modules)
+ ✓ Compiled in 1046ms (688 modules)
+ ✓ Compiled in 1504ms (688 modules)
+ ✓ Compiled in 1005ms (688 modules)
+ ✓ Compiled in 769ms (688 modules)
+ ✓ Compiled in 779ms (688 modules)
+ ✓ Compiled in 692ms (688 modules)
+ ✓ Compiled in 573ms (688 modules)
+ ✓ Compiled in 457ms (688 modules)
+ ✓ Compiled in 657ms (688 modules)
+ ✓ Compiled in 1057ms (688 modules)
+ ✓ Compiled in 688ms (688 modules)
+ ✓ Compiled in 976ms (688 modules)
+ ✓ Compiled in 870ms (688 modules)
+ ✓ Compiled in 774ms (688 modules)
+ ✓ Compiled in 693ms (688 modules)
+ ✓ Compiled in 717ms (688 modules)
+ ✓ Compiled in 1887ms (688 modules)
+ ✓ Compiled in 3.9s (1107 modules)
+ ✓ Compiled in 3.4s (1107 modules)
+ ✓ Compiled in 873ms (688 modules)
+ GET /api/lessons?level=1ac&track=idadi 404 in 177ms
+ GET /api/lessons?level=1ac&track=idadi 404 in 167ms
+ ✓ Compiled in 549ms (688 modules)
+ ✓ Compiled in 1189ms (688 modules)
+ ✓ Compiled in 443ms (688 modules)
+ ✓ Compiled in 490ms (688 modules)
+ ✓ Compiled in 602ms (688 modules)
+ GET / 200 in 151ms
+ ○ Compiling /[locale]/auth/login ...
+ ✓ Compiled /[locale]/auth/login in 2.6s (428 modules)
+ GET /auth/login 200 in 2944ms
+ ○ Compiling /[locale]/auth/register ...
+ ✓ Compiled /[locale]/auth/register in 1384ms (434 modules)
+ GET /auth/register 200 in 1823ms
+ ○ Compiling /[locale]/dashboard ...
+ ✓ Compiled /[locale]/dashboard in 1525ms (439 modules)
+ GET /dashboard 200 in 1911ms
+ GET /lessons 200 in 117ms
+ ○ Compiling /[locale]/exercises ...
+ ✓ Compiled /[locale]/exercises in 5.9s (713 modules)
+ GET /exercises 200 in 9920ms
+ ○ Compiling /[locale]/videos ...
+ ✓ Compiled /[locale]/videos in 1921ms (719 modules)
+ GET /videos 200 in 2891ms
+ ○ Compiling /[locale]/homework ...
+ ✓ Compiled /[locale]/homework in 942ms (726 modules)
+ GET /homework 200 in 1399ms
+ GET /admin 200 in 154ms
+ GET /admin/lessons 200 in 141ms
+ ○ Compiling /[locale]/admin/exercises ...
+ ✓ Compiled /[locale]/admin/exercises in 1983ms (730 modules)
+ GET /admin/exercises 200 in 2755ms
+ ○ Compiling /[locale]/admin/videos ...
+ ✓ Compiled /[locale]/admin/videos in 3.1s (1410 modules)
+ GET /admin/videos 200 in 6423ms
+ ○ Compiling /[locale]/admin/homework ...
+ ✓ Compiled /[locale]/admin/homework in 3.2s (739 modules)
+ GET /admin/homework 200 in 3817ms
+ GET /admin/students 200 in 257ms
+ ○ Compiling /[locale]/admin/students/[id] ...
+ ✓ Compiled /[locale]/admin/students/[id] in 7.8s (744 modules)
+ GET /admin/students/test-id 200 in 8881ms
+ GET /exercises 200 in 613ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1804ms (1391 modules)
+ GET /api/lessons 404 in 2171ms
+ GET /api/lessons 404 in 61ms
+ GET /api/users 404 in 179ms
+ GET /api/users 404 in 70ms
+ GET /api/lessons?level=1ac&track=idadi 404 in 125ms
+ GET /api/lessons?level=1ac&track=idadi 404 in 126ms
+ ✓ Compiled /[locale]/videos in 504ms (707 modules)
+ GET /api/videos?level=1ac&track=idadi 404 in 98ms
+ GET /api/videos?level=1ac&track=idadi 404 in 51ms
+ GET /api/exercises?level=1ac&track=idadi 404 in 53ms
+ GET /api/exercises?level=1ac&track=idadi 404 in 69ms
+ ✓ Compiled /[locale]/homework in 310ms (709 modules)
+ GET /api/homework?level=1ac&track=idadi 404 in 77ms
+ GET /api/homework?level=1ac&track=idadi 404 in 68ms
+ GET /api/lessons?level=1ac&track=idadi 404 in 37ms
+ GET /api/lessons?level=1ac&track=idadi 404 in 35ms
+ GET /api/lessons 404 in 98ms
+ GET /api/lessons 404 in 61ms
+ GET /api/lessons 404 in 94ms
+ GET /api/lessons 404 in 45ms
+ GET /api/lessons 404 in 58ms
+ ✓ Compiled in 445ms (104 modules)
+ ○ Compiling /api/lessons ...
+ ✓ Compiled /api/lessons in 1464ms (534 modules)
+ GET /api/lessons?level=1ac&track=idadi 200 in 1656ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 1657ms
+ GET /api/lessons 200 in 20ms
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 568ms (536 modules)
+ GET /api/users 200 in 694ms
+ GET /api/users 200 in 76ms
+ ✓ Compiled /api/progress in 465ms (538 modules)
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 583ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 41ms
+ GET / 200 in 265ms
+ GET /lessons 200 in 126ms
+ ○ Compiling /[locale]/exercises ...
+ ✓ Compiled /[locale]/exercises in 561ms (814 modules)
+ GET /exercises 200 in 960ms
+ ○ Compiling /[locale]/videos ...
+ ✓ Compiled /[locale]/videos in 949ms (820 modules)
+ GET /videos 200 in 1203ms
+ ○ Compiling /[locale]/homework ...
+ ✓ Compiled /[locale]/homework in 726ms (827 modules)
+ GET /homework 200 in 1687ms
+ ○ Compiling /[locale]/dashboard ...
+ ✓ Compiled /[locale]/dashboard in 1116ms (832 modules)
+ GET /dashboard 200 in 1368ms
+ GET /api/lessons 200 in 83ms
+ GET /api/lessons 200 in 72ms
+ ○ Compiling /[locale]/admin/lessons/new ...
+ ✓ Compiled /[locale]/admin/lessons/new in 1147ms (851 modules)
+ ○ Compiling /api/upload ...
+ ✓ Compiled /api/upload in 1120ms (813 modules)
+ POST /api/upload 201 in 1348ms
+ POST /api/upload 201 in 230ms
+ ○ Compiling /[locale]/lessons/[id] ...
+ ✓ Compiled /[locale]/lessons/[id] in 1040ms (705 modules)
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 890ms (819 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 1118ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 514ms (821 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 1148ms
+ POST /api/progress 200 in 1198ms
+ POST /api/progress 200 in 36ms
+ ✓ Compiled in 2.1s (1390 modules)
+ ✓ Compiled in 2.3s (1390 modules)
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 1821ms (1390 modules)
+ ✓ Compiled in 1ms (814 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 2145ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 2.7s (816 modules)
+ POST /api/progress 200 in 3002ms
+ ✓ Compiled in 997ms (690 modules)
+ ✓ Compiled in 662ms (690 modules)
+ ✓ Compiled in 968ms (690 modules)
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 1173ms (823 modules)
+ GET / 200 in 1631ms
+ GET /lessons 200 in 147ms
+ ○ Compiling /[locale]/exercises ...
+ ✓ Compiled /[locale]/exercises in 1882ms (830 modules)
+ GET /exercises 200 in 2649ms
+ ○ Compiling /[locale]/videos ...
+ ✓ Compiled /[locale]/videos in 1395ms (836 modules)
+ GET /videos 200 in 1711ms
+ ○ Compiling /[locale]/homework ...
+ ✓ Compiled /[locale]/homework in 1026ms (843 modules)
+ GET /homework 200 in 1317ms
+ ○ Compiling /api/upload ...
+ ✓ Compiled /api/upload in 617ms (814 modules)
+ POST /api/upload 201 in 809ms
+ POST /api/upload 201 in 74ms
+ POST /api/upload 201 in 53ms
+ POST /api/upload 201 in 66ms
+ ○ Compiling /api/lessons ...
+ ✓ Compiled /api/lessons in 914ms (816 modules)
+ POST /api/lessons 201 in 1109ms
+ GET /api/lessons 200 in 44ms
+ GET /api/lessons 200 in 33ms
+ ✓ Compiled /[locale]/admin in 463ms (822 modules)
+ ✓ Compiled /api/users in 460ms (824 modules)
+ GET /api/users 200 in 536ms
+ GET /api/users 200 in 43ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 571ms (826 modules)
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 765ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 32ms
+ GET /api/lessons 200 in 40ms
+ GET /api/lessons 200 in 38ms
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 1074ms (815 modules)
+ GET /api/lessons/mryhz438pcr8woj2o 200 in 1196ms
+ GET /api/lessons/mryhz438pcr8woj2o 200 in 46ms
+ ✓ Compiled /api/users in 435ms (817 modules)
+ GET /api/users 200 in 541ms
+ GET /api/users 200 in 39ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 575ms (819 modules)
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 801ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 42ms
+ ○ Compiling /[locale]/admin/lessons ...
+ ✓ Compiled /[locale]/admin/lessons in 692ms (706 modules)
+ ○ Compiling /api/lessons ...
+ ✓ Compiled /api/lessons in 876ms (820 modules)
+ GET /api/lessons 200 in 1102ms
+ GET /api/lessons 200 in 40ms
+ GET /admin/lessons 200 in 268ms
+ GET /api/lessons 200 in 76ms
+ GET /api/lessons 200 in 39ms
+ ○ Compiling /[locale]/admin/lessons/[id]/edit ...
+ ✓ Compiled /[locale]/admin/lessons/[id]/edit in 536ms (822 modules)
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 895ms (824 modules)
+ GET /api/lessons/mryckebf0otej4rzc 200 in 1038ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 65ms
+ ✓ Compiled in 1594ms (1507 modules)
+ GET /api/lessons/mryckebf0otej4rzc 200 in 58ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 40ms
+ ✓ Compiled /[locale]/lessons in 201ms (824 modules)
+ GET /api/lessons 200 in 66ms
+ GET /api/lessons 200 in 47ms
+ GET /api/lessons 200 in 28ms
+ GET /api/lessons 200 in 37ms
+ ✓ Compiled in 488ms (690 modules)
+ ✓ Compiled in 554ms (690 modules)
+ ✓ Compiled in 491ms (690 modules)
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 740ms (822 modules)
+ GET /api/users 200 in 892ms
+ ✓ Compiled /api/progress in 448ms (824 modules)
+ GET /api/users 200 in 1025ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 1043ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 38ms
+ ✓ Compiled in 1907ms (1516 modules)
+ ✓ Compiled in 590ms (691 modules)
+ ○ Compiling /api/lessons ...
+ ✓ Compiled /api/lessons in 651ms (823 modules)
+ GET /api/lessons 200 in 743ms
+ GET /api/lessons 200 in 31ms
+ ✓ Compiled in 844ms (691 modules)
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 555ms (825 modules)
+ PUT /api/lessons/mrydfai0o0ljke1ft 200 in 793ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 37ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 41ms
+ GET /lessons 200 in 224ms
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 1239ms (832 modules)
+ GET /favicon.ico 404 in 1670ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 78ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 31ms
+ PUT /api/lessons/mrydfai0o0ljke1ft 200 in 31ms
+ ✓ Compiled in 525ms (690 modules)
+ GET /lessons 200 in 120ms
+ GET /favicon.ico 404 in 115ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 40ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 33ms
+ ✓ Compiled in 1046ms (690 modules)
+ GET / 200 in 101ms
+ GET /lessons 200 in 57ms
+ ○ Compiling /[locale]/exercises ...
+ ✓ Compiled /[locale]/exercises in 756ms (832 modules)
+ GET /exercises 200 in 1071ms
+ ○ Compiling /[locale]/videos ...
+ ✓ Compiled /[locale]/videos in 827ms (838 modules)
+ GET /videos 200 in 1076ms
+ ○ Compiling /[locale]/homework ...
+ ✓ Compiled /[locale]/homework in 614ms (845 modules)
+ GET /homework 200 in 875ms
+ ✓ Compiled /[locale]/admin in 437ms (851 modules)
+ GET /admin 200 in 652ms
+ GET /admin/lessons 200 in 85ms
+ ○ Compiling /[locale]/admin/exercises ...
+ ✓ Compiled /[locale]/admin/exercises in 618ms (855 modules)
+ GET /admin/exercises 200 in 785ms
+ ○ Compiling /[locale]/admin/videos ...
+ ✓ Compiled /[locale]/admin/videos in 1401ms (860 modules)
+ GET /admin/videos 200 in 1682ms
+ ○ Compiling /[locale]/admin/homework ...
+ ✓ Compiled /[locale]/admin/homework in 1169ms (864 modules)
+ GET /admin/homework 200 in 1444ms
+ GET /api/lessons 200 in 80ms
+ ✓ Compiled in 944ms (690 modules)
+ GET /lessons 200 in 136ms
+ GET /exercises 200 in 340ms
+ GET /videos 200 in 132ms
+ GET /homework 200 in 153ms
+ GET /admin/lessons 200 in 124ms
+ GET /api/lessons 200 in 63ms
+ GET /api/lessons 200 in 44ms
+ GET /admin/lessons 200 in 129ms
+ GET /api/lessons 200 in 51ms
+ GET /api/lessons 200 in 40ms
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 974ms (825 modules)
+ GET /api/users 200 in 1294ms
+ GET /api/users 200 in 51ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 561ms (827 modules)
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 871ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 34ms
+ GET /api/lessons 200 in 28ms
+ GET /api/lessons 200 in 39ms
+ ✓ Compiled in 1888ms (1496 modules)
+ ✓ Compiled in 1ms (806 modules)
+ ✓ Compiled in 1ms (806 modules)
+ ✓ Compiled in 0ms (806 modules)
+ GET /api/lessons 200 in 1557ms
+ ✓ Compiled in 0ms (806 modules)
+ GET /api/lessons 200 in 1128ms
+ ✓ Compiled in 1447ms (1496 modules)
+ ✓ Compiled in 1ms (806 modules)
+ ✓ Compiled in 0ms (806 modules)
+ ✓ Compiled in 1ms (806 modules)
+ GET /api/lessons 200 in 1626ms
+ GET /api/users 200 in 41ms
+ GET /api/users 200 in 48ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 69ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 55ms
+ ✓ Compiled in 663ms (1496 modules)
+ ○ Compiling /[locale]/admin/videos ...
+ ✓ Compiled /[locale]/admin/videos in 744ms (811 modules)
+ ○ Compiling /api/videos ...
+ ✓ Compiled /api/videos in 781ms (813 modules)
+ GET /api/videos 200 in 894ms
+ GET /api/videos 200 in 59ms
+ ✓ Compiled in 742ms (1503 modules)
+ ✓ Compiled in 405ms (690 modules)
+ ✓ Compiled in 1110ms (1229 modules)
+ ✓ Compiled in 620ms (690 modules)
+ GET /api/lessons 200 in 49ms
+ GET /api/lessons 200 in 39ms
+ ✓ Compiled in 482ms (690 modules)
+ ✓ Compiled in 506ms (1229 modules)
+ ✓ Compiled in 462ms (690 modules)
+ ✓ Compiled in 539ms (690 modules)
+ ✓ Compiled in 1203ms (1229 modules)
+ ✓ Compiled in 1075ms (690 modules)
+ GET /lessons 200 in 1000ms
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 1269ms (540 modules)
+ GET /favicon.ico 404 in 1623ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 806ms
+ GET /api/lessons?level=1ac&track=idadi 200 in 105ms
+ ✓ Compiled in 450ms (690 modules)
+ ✓ Compiled in 1822ms (1230 modules)
+ ○ Compiling /[locale]/lessons/[id] ...
+ ✓ Compiled /[locale]/lessons/[id] in 2.1s (814 modules)
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 723ms (816 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 871ms
+ ✓ Compiled /api/progress in 501ms (818 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 1037ms
+ POST /api/progress 200 in 1120ms
+ POST /api/progress 200 in 109ms
+ GET /admin/lessons 200 in 176ms
+ ○ Compiling /[locale]/admin/exercises ...
+ ✓ Compiled /[locale]/admin/exercises in 622ms (816 modules)
+ GET /admin/exercises 200 in 846ms
+ GET /admin/videos 200 in 99ms
+ ○ Compiling /[locale]/admin/homework ...
+ ✓ Compiled /[locale]/admin/homework in 1197ms (820 modules)
+ GET /admin/homework 200 in 1410ms
+ GET /admin/lessons 200 in 162ms
+ GET /api/lessons 200 in 115ms
+ GET /api/lessons 200 in 42ms
+ GET /lessons/mrydfai0o0ljke1ft 200 in 200ms
+ GET /favicon.ico 404 in 105ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 47ms
+ POST /api/progress 200 in 72ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 95ms
+ POST /api/progress 200 in 61ms
+ GET /lessons 200 in 77ms
+ GET /admin/lessons 200 in 133ms
+ GET /lessons 200 in 150ms
+ GET /api/lessons 200 in 51ms
+ GET /api/lessons 200 in 67ms
+ GET /lessons 200 in 87ms
+ GET /admin/lessons 200 in 130ms
+ GET /api/lessons 200 in 39ms
+ GET /api/lessons 200 in 31ms
+ GET /lessons 200 in 81ms
+ GET /api/lessons 200 in 26ms
+ GET /admin/lessons 200 in 108ms
+ GET /api/lessons 200 in 41ms
+ GET /api/lessons 200 in 44ms
+ GET /admin/lessons 200 in 102ms
+ GET /api/lessons 200 in 52ms
+ GET /api/lessons 200 in 44ms
+ GET /admin/lessons 200 in 77ms
+ GET /api/lessons 200 in 47ms
+ GET /api/lessons 200 in 37ms
+ GET /admin/lessons 200 in 105ms
+ GET /api/lessons 200 in 57ms
+ GET /api/lessons 200 in 51ms
+ GET /api/lessons 200 in 23ms
+ GET /api/lessons 200 in 22ms
+ ○ Compiling /api/exercises ...
+ ✓ Compiled /api/exercises in 1072ms (803 modules)
+ GET /api/exercises 200 in 1350ms
+ ○ Compiling /api/videos ...
+ ✓ Compiled /api/videos in 619ms (805 modules)
+ GET /api/videos 200 in 723ms
+ GET /admin/lessons 200 in 296ms
+ GET /api/lessons 200 in 57ms
+ GET /api/lessons 200 in 50ms
+ GET /lessons/mrydfai0o0ljke1ft 200 in 176ms
+ ✓ Compiled /[locale] in 479ms (810 modules)
+ GET /favicon.ico 404 in 1144ms
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 546ms (812 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 746ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 46ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 682ms (814 modules)
+ POST /api/progress 200 in 801ms
+ POST /api/progress 200 in 1055ms
+ ○ Compiling /[locale]/admin/lessons/[id]/edit ...
+ ✓ Compiled /[locale]/admin/lessons/[id]/edit in 1350ms (708 modules)
+ ✓ Compiled /api/lessons/[id] in 468ms (822 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 723ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 32ms
+ ○ Compiling /api/upload ...
+ ✓ Compiled /api/upload in 833ms (816 modules)
+ POST /api/upload 201 in 1074ms
+ POST /api/upload 201 in 45ms
+ ○ Compiling /api/lessons/[id] ...
+ ✓ Compiled /api/lessons/[id] in 550ms (816 modules)
+ PUT /api/lessons/mrydfai0o0ljke1ft 200 in 745ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 35ms
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 108ms
+ ○ Compiling /api/lessons ...
+ ✓ Compiled /api/lessons in 974ms (818 modules)
+ GET /api/lessons 200 in 1240ms
+ GET /api/lessons 200 in 33ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 50ms
+ GET /api/lessons/mryckebf0otej4rzc 200 in 46ms
+ GET /api/lessons 200 in 48ms
+ GET /api/lessons 200 in 44ms
+ ○ Compiling /[locale]/admin ...
+ ✓ Compiled /[locale]/admin in 796ms (823 modules)
+ ○ Compiling /[locale]/admin/students ...
+ ✓ Compiled /[locale]/admin/students in 1255ms (709 modules)
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 744ms (823 modules)
+ GET /api/users 200 in 1114ms
+ GET /api/users 200 in 49ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 1031ms (825 modules)
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 1372ms
+ GET /api/progress?userId=mryeuj3hnqyl4voe6 200 in 59ms
+ ○ Compiling /[locale]/admin/lessons/new ...
+ ✓ Compiled /[locale]/admin/lessons/new in 1743ms (830 modules)
+ GET /lessons/mrydfai0o0ljke1ft 200 in 3659ms
+ ○ Compiling /[locale] ...
+ ✓ Compiled /api/lessons/[id] in 3.8s (711 modules)
+ ✓ Compiled (825 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 2771ms
+ GET /favicon.ico 404 in 6126ms
+ ○ Compiling /api/progress ...
+ ✓ Compiled /api/progress in 761ms (827 modules)
+ GET /api/lessons/mrydfai0o0ljke1ft 200 in 1672ms
+ POST /api/progress 200 in 1733ms
+ POST /api/progress 200 in 78ms
+   Reload env: .env.local
+ ✓ Compiled in 12.3s (1498 modules)
+ ✓ Compiled in 801ms (690 modules)
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 634ms (711 modules)
+ ⨯ TypeError: Cannot read properties of undefined (reading 'clientModules')
+    at C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:24996
+    at C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\lib\trace\tracer.js:191:62
+    at C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\lib\trace\tracer.js:140:36
+    at NoopContextManager.with (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NoopTracer.startActiveSpan (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18093)
+    at ProxyTracer.startActiveSpan (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18854)
+    at C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\lib\trace\tracer.js:122:103
+    at NoopContextManager.with (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NextTracerImpl.trace (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\lib\trace\tracer.js:122:28)
+    at C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\lib\trace\tracer.js:191:31
+    at r6 (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:41:1678)
+    at async doRender (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\base-server.js:1438:30)
+    at async cacheEntry.responseCache.get.routeKind (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\base-server.js:1599:28) {
+  page: '/fr'
+}
+ ○ Compiling /_error ...
+ ⨯ Failed to generate static paths for /[locale]:
+Error: Cannot find module './vendor-chunks/next.js'
+Require stack:
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\page.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\dev\static-paths-worker.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\jest-worker\processChild.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1517:15)
+    at C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
+    at mod.require (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\.next\\server\\webpack-runtime.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\.next\\server\\app\\[locale]\\page.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\server\\dev\\static-paths-worker.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\compiled\\jest-worker\\processChild.js'
+  ]
+}
+ ✓ Compiled /_error in 5.5s (1611 modules)
+ GET / 500 in 8068ms
+ ○ Compiling /_not-found ...
+ ⨯ Failed to generate static paths for /[locale]/lessons/[id]:
+Error: Cannot find module './vendor-chunks/@formatjs.js'
+Require stack:
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\lessons\[id]\page.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\dev\static-paths-worker.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\jest-worker\processChild.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1517:15)
+    at C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
+    at mod.require (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\.next\\server\\webpack-runtime.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\.next\\server\\app\\[locale]\\lessons\\[id]\\page.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\server\\dev\\static-paths-worker.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\compiled\\jest-worker\\processChild.js'
+  ]
+}
+ ⨯ Failed to generate static paths for /[locale]/lessons/[id]:
+Error: Cannot find module './vendor-chunks/@formatjs.js'
+Require stack:
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\lessons\[id]\page.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\dev\static-paths-worker.js
+- C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\compiled\jest-worker\processChild.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1517:15)
+    at C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
+    at mod.require (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\.next\\server\\webpack-runtime.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\.next\\server\\app\\[locale]\\lessons\\[id]\\page.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\server\\dev\\static-paths-worker.js',
+    'C:\\Users\\OUSAMA\\Documents\\Default Project\\physique-school\\node_modules\\next\\dist\\compiled\\jest-worker\\processChild.js'
+  ]
+}
+ ✓ Compiled /_not-found in 2.2s (1614 modules)
+ GET /_next/static/css/app/layout.css?v=1784915170922 404 in 2531ms
+ ⨯ Error [PageNotFoundError]: Cannot find module for page: /[locale]/lessons/[id]/page
+    at getPagePath (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js:94:15)
+    at requirePage (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js:99:22)
+    at C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js:98:84
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async loadComponentsImpl (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js:98:26)
+    at async Object.loadStaticPaths (C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\dev\static-paths-worker.js:23:24) {
+  type: 'PageNotFoundError',
+  code: 'ENOENT',
+  page: '/fr/lessons/mrydfai0o0ljke1ft'
+}
+ GET /lessons/mrydfai0o0ljke1ft 404 in 51ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 90ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 86ms
+ GET /favicon.ico 404 in 1834ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 65ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 47ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 51ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 112ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 60ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 77ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 63ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 86ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 55ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 64ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 62ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 57ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 24ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 32ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 48ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 29ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 31ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 54ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 31ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 60ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 43ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 46ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 67ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 48ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 49ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 67ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 66ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 56ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\vendor-chunks\bail.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/bail' in C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server for build dependencies doesn't lead to expected result 'C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\vendor-chunks\bail.js', but to 'Error: Can't resolve './vendor-chunks/bail' in 'C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/bail (expected C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\vendor-chunks\bail.js)
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\page.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\page.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/has-flag' in C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server for build dependencies doesn't lead to expected result 'C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\vendor-chunks\has-flag.js', but to 'Error: Can't resolve './vendor-chunks/has-flag' in 'C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/has-flag (expected C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\vendor-chunks\has-flag.js)
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\page.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\page.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/is-plain-obj' in C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server for build dependencies doesn't lead to expected result 'C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\vendor-chunks\is-plain-obj.js', but to 'Error: Can't resolve './vendor-chunks/is-plain-obj' in 'C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/is-plain-obj (expected C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\vendor-chunks\is-plain-obj.js)
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\page.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\page.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/space-separated-tokens' in C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server for build dependencies doesn't lead to expected result 'C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\vendor-chunks\space-separated-tokens.js', but to 'Error: Can't resolve './vendor-chunks/space-separated-tokens' in 'C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/space-separated-tokens (expected C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\vendor-chunks\space-separated-tokens.js)
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\page.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\.next\server\app\[locale]\page.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\OUSAMA\Documents\Default Project\physique-school\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+ GET /lessons/mrydfai0o0ljke1ft 404 in 26ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 57ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 32ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 29ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 43ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 45ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 47ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 45ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 75ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 26ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 52ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 42ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 27ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 28ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 54ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 25ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 26ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 79ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 108ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 71ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 28ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 48ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 27ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 50ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 49ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 54ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 56ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 25ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 25ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 60ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 65ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 47ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 28ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 31ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 27ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 42ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 52ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 55ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 29ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 55ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 67ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 53ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 53ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 26ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 66ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 64ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 57ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 60ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 54ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 53ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 63ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 31ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 51ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 48ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 31ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 66ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 57ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 54ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 31ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 45ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 54ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 27ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 50ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 65ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 47ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 50ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 50ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 26ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 27ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 46ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 29ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 56ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 28ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 28ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 69ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 55ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 56ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 24ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 50ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 53ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 49ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 59ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 42ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 45ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 50ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 78ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 64ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 27ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 56ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 65ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 93ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 33ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 60ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 31ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 55ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 32ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 27ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 55ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 39ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 59ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 27ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 49ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 79ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 27ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 29ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 25ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 55ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 43ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 54ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 26ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 32ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 25ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 52ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 32ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 25ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 35ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 62ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 31ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 57ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 32ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 23ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 32ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 64ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 32ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 36ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 68ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 54ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 25ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 24ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 65ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 64ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 43ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 53ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 25ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 58ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 55ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 61ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 90ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 57ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 44ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 41ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 58ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 65ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 37ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 31ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 46ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 29ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 51ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 28ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 50ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 34ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 38ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 40ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 30ms
+ GET /lessons/mrydfai0o0ljke1ft 404 in 61ms
+[?25h
