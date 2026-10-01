@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter, Link } from '@/i18n/navigation';
-import { ArrowLeft, Plus, Trash2, Eye, EyeOff } from 'lucide-react';
+import { ArrowLeft, Plus, Trash2, Eye, EyeOff, Edit } from 'lucide-react';
 
 export default function AdminVideosPage() {
   const t = useTranslations();
@@ -100,6 +100,7 @@ export default function AdminVideosPage() {
               <thead className="bg-gray-50 border-b">
                 <tr>
                   <th className="text-start px-6 py-3 text-sm font-medium text-gray-500">Title</th>
+                  <th className="text-start px-6 py-3 text-sm font-medium text-gray-500">Chapitre</th>
                   <th className="text-start px-6 py-3 text-sm font-medium text-gray-500">Level</th>
                   <th className="text-start px-6 py-3 text-sm font-medium text-gray-500">Status</th>
                   <th className="text-end px-6 py-3 text-sm font-medium text-gray-500">Actions</th>
@@ -109,6 +110,7 @@ export default function AdminVideosPage() {
                 {filtered.map((video) => (
                   <tr key={video._id} className="hover:bg-gray-50">
                     <td className="px-6 py-4 text-sm">{video.titleFr}</td>
+                    <td className="px-6 py-4 text-sm">{video.chapterFr || '-'}</td>
                     <td className="px-6 py-4 text-sm">{video.level}</td>
                     <td className="px-6 py-4 text-sm">
                       <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium ${video.published !== false ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
@@ -117,6 +119,13 @@ export default function AdminVideosPage() {
                     </td>
                     <td className="px-6 py-4 text-sm text-end">
                       <div className="flex items-center justify-end gap-1">
+                        <Link
+                          href={`/admin/videos/${video._id}/edit`}
+                          className="text-primary-600 hover:text-primary-800 p-1"
+                          title="Modifier"
+                        >
+                          <Edit size={16} />
+                        </Link>
                         <button
                           onClick={() => togglePublish(video._id, video.published !== false)}
                           className={`p-1 rounded transition-colors ${video.published !== false ? 'text-green-500 hover:text-green-700' : 'text-gray-400 hover:text-gray-600'}`}

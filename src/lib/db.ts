@@ -1,6 +1,7 @@
-import { connectDB } from './mongodb';
-import { UserModel, LessonModel, VideoModel, ExerciseModel, HomeworkModel, ProgressModel } from './models';
-import type { Model } from 'mongoose';
+import path from 'path';
+import { promises as fs } from 'fs';
+
+const DATA_DIR = path.join(process.cwd(), 'data');
 
 export interface DataStore<T> {
   find(filter?: Partial<T>): Promise<T[]>;
@@ -10,79 +11,88 @@ export interface DataStore<T> {
   delete(id: string): Promise<boolean>;
 }
 
-type MongooseModel = Model<any>;
+const CHARS = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
-function getModel(collection: string): MongooseModel {
-  switch (collection) {
-    case 'users': return UserModel;
-    case 'lessons': return LessonModel;
-    case 'videos': return VideoModel;
-    case 'exercises': return ExerciseModel;
-    case 'homework': return HomeworkModel;
-    case 'progress': return ProgressModel;
-    default: throw new Error(`Unknown collection: ${collection}`);
+function generateId(length = 20): string {
+  let id = '';
+  for (let i = 0; i < length; i++) {
+    id += CHARS[Math.floor(Math.random() * CHARS.length)];
+  }
+  return id;
+}
+
+function getFilePath(collection: string): string {
+  return path.join(DATA_DIR, collection, 'index.json');
+}
+
+async function readCollection<T>(collection: string): Promise<T[]> {
+  try {
+    const raw = await fs.readFile(getFilePath(collection), 'utf-8');
+    const data = JSON.parse(raw);
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
   }
 }
 
-export function createCollection<T extends { _id?: string }>(collection: string): DataStore<T> {
-  const Model = getModel(collection);
+async function writeCollection<T>(collection: string, items: T[]): Promise<void> {
+  await fs.writeFile(getFilePath(collection), JSON.stringify(items, null, 2), 'utf-8');
+}
 
+export function createCollection<T extends { _id?: string }>(collection: string): DataStore<T> {
   return {
     async find(filter?: Partial<T>): Promise<T[]> {
-      await connectDB();
+      const items = await readCollection<T>(collection);
       if (!filter || Object.keys(filter).length === 0) {
-        const docs = await Model.find().lean();
-        return docs.map((d: any) => ({ ...d, _id: d._id.toString() }));
+        return items;
       }
-      const query: Record<string, any> = {};
-      for (const [key, value] of Object.entries(filter)) {
-        if (value !== undefined && value !== null && value !== '') {
-          query[key] = value;
-        }
-      }
-      const docs = await Model.find(query).lean();
-      return docs.map((d: any) => ({ ...d, _id: d._id.toString() }));
+      return items.filter((item) =>
+        Object.entries(filter).every(([key, value]) => {
+          if (value === undefined || value === null || value === '') return true;
+          return (item as any)[key] === value;
+        })
+      );
     },
 
     async findById(id: string): Promise<T | null> {
-      await connectDB();
-      try {
-        const doc = await Model.findById(id).lean();
-        if (!doc) return null;
-        return { ...doc, _id: doc._id.toString() } as T;
-      } catch {
-        return null;
-      }
+      const items = await readCollection<T>(collection);
+      return items.find((item) => item._id === id) ?? null;
     },
 
     async create(item: Omit<T, '_id' | 'createdAt' | 'updatedAt'>): Promise<T> {
-      await connectDB();
-      const doc = await Model.create(item);
-      const obj = doc.toObject();
-      obj._id = obj._id.toString();
-      delete obj.__v;
-      return obj as T;
+      const items = await readCollection<T>(collection);
+      const now = new Date().toISOString();
+      const newItem = {
+        ...item,
+        _id: generateId(),
+        createdAt: now,
+        updatedAt: now,
+      } as unknown as T;
+      items.push(newItem);
+      await writeCollection(collection, items);
+      return newItem;
     },
 
     async update(id: string, data: Partial<T>): Promise<T | null> {
-      await connectDB();
-      try {
-        const doc = await Model.findByIdAndUpdate(id, { ...data, updatedAt: new Date() }, { new: true }).lean();
-        if (!doc) return null;
-        return { ...doc, _id: doc._id.toString() } as T;
-      } catch {
-        return null;
-      }
+      const items = await readCollection<T>(collection);
+      const index = items.findIndex((item) => item._id === id);
+      if (index === -1) return null;
+      items[index] = {
+        ...items[index],
+        ...data,
+        _id: id,
+        updatedAt: new Date().toISOString(),
+      };
+      await writeCollection(collection, items);
+      return items[index];
     },
 
     async delete(id: string): Promise<boolean> {
-      await connectDB();
-      try {
-        const result = await Model.findByIdAndDelete(id);
-        return !!result;
-      } catch {
-        return false;
-      }
+      const items = await readCollection<T>(collection);
+      const filtered = items.filter((item) => item._id !== id);
+      if (filtered.length === items.length) return false;
+      await writeCollection(collection, filtered);
+      return true;
     },
   };
 }

@@ -44,7 +44,15 @@ export default function AdminStudentsPage() {
   const fetchStudents = () => {
     const token = localStorage.getItem('token');
     fetch('/api/users', { headers: { Authorization: `Bearer ${token}` } })
-      .then((r) => r.json())
+      .then((r) => {
+        if (r.status === 401) {
+          localStorage.removeItem('token');
+          localStorage.removeItem('user');
+          router.push('/auth/login');
+          throw new Error('Unauthorized');
+        }
+        return r.json();
+      })
       .then((data) => {
         const allUsers = Array.isArray(data) ? data : [];
         setStudents(allUsers.filter((u: Student) => u.role === 'student'));

@@ -23,6 +23,7 @@
     "delete": "Supprimer",
     "edit": "Modifier",
     "add": "Ajouter",
+    "open": "Ouvrir",
     "back": "Retour",
     "next": "Suivant",
     "previous": "Précédent",
@@ -52,7 +53,23 @@
     "emailRequired": "L'email est requis",
     "passwordRequired": "Le mot de passe est requis",
     "passwordMismatch": "Les mots de passe ne correspondent pas",
-    "accountCreated": "Compte créé avec succès"
+    "accountCreated": "Compte créé avec succès",
+    "forgotPassword": "Mot de passe oublié ?",
+    "forgotTitle": "Réinitialiser le mot de passe",
+    "forgotSubtitle": "Entrez votre email et définissez un nouveau mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "resetPasswordButton": "Réinitialiser",
+    "passwordResetSuccess": "Mot de passe réinitialisé avec succès. Redirection...",
+    "backToLogin": "Retour à la connexion"
+  },
+  "profile": {
+    "changePasswordTitle": "Changer le mot de passe",
+    "changePasswordSubtitle": "Entrez votre mot de passe actuel puis définissez un nouveau",
+    "currentPassword": "Mot de passe actuel",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le nouveau mot de passe",
+    "changePasswordButton": "Changer le mot de passe",
+    "passwordChanged": "Mot de passe modifié avec succès"
   },
   "levels": {
     "1ac": "1ère Année Collège",
@@ -74,7 +91,11 @@
     "totalHomework": "Total des devoirs",
     "recentLessons": "Dernières leçons",
     "myLevel": "Mon niveau",
-    "myTrack": "Ma filière"
+    "myTrack": "Ma filière",
+    "chooseLesson": "Choisissez votre leçon",
+    "backToDashboard": "Retour au tableau de bord",
+    "noChapterContent": "Aucun contenu disponible pour ce chapitre",
+    "noCategoryContent": "Aucun contenu disponible dans cette catégorie"
   },
   "lessons": {
     "title": "Leçons",
@@ -84,7 +105,8 @@
     "lessonContent": "Contenu de la leçon",
     "duration": "Durée",
     "minutes": "minutes",
-    "viewLesson": "Voir la leçon"
+    "viewLesson": "Voir la leçon",
+    "hideLesson": "Masquer la leçon"
   },
   "videos": {
     "title": "Vidéos",

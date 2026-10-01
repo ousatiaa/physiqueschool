@@ -39,6 +39,8 @@ export interface Video {
   thumbnail: string;
   level: string;
   track: string;
+  chapter: string;
+  chapterFr: string;
   duration: number;
   lessonId?: string;
   published?: boolean;

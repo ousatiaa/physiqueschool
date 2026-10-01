@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Users, BookOpen, FileText, Video, ClipboardList, Clock, CheckCircle, Trash2, X } from 'lucide-react';
+import { ArrowLeft, Users, BookOpen, FileText, Video, ClipboardList, Clock, CheckCircle, Trash2, X, Lock } from 'lucide-react';
 import { getLevelConfig } from '@/lib/constants';
 
 interface Student {
@@ -39,6 +39,9 @@ export default function StudentDetailPage() {
   const [loading, setLoading] = useState(true);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [newPassword, setNewPassword] = useState('');
+  const [resetMsg, setResetMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [resetting, setResetting] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem('user');
@@ -73,6 +76,29 @@ export default function StudentDetailPage() {
       }
     } catch {}
     setDeleting(false);
+  };
+
+  const handleResetPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setResetMsg(null);
+    setResetting(true);
+    try {
+      const res = await fetch('/api/auth/reset-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: student.email, newPassword }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setResetMsg({ type: 'success', text: 'Mot de passe réinitialisé avec succès' });
+        setNewPassword('');
+      } else {
+        setResetMsg({ type: 'error', text: data.error || 'Une erreur est survenue' });
+      }
+    } catch {
+      setResetMsg({ type: 'error', text: 'Une erreur est survenue' });
+    }
+    setResetting(false);
   };
 
   const levelConfig = getLevelConfig(student.level as any);
@@ -168,6 +194,41 @@ export default function StudentDetailPage() {
             </div>
           ) : (
             <p className="text-gray-400 text-center py-6">Aucune activité récente</p>
+          )}
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-sm p-6 mt-6">
+          <h2 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
+            <Lock size={20} />
+            Réinitialiser le mot de passe
+          </h2>
+          <form onSubmit={handleResetPassword} className="flex flex-col sm:flex-row gap-3 items-start sm:items-end">
+            <div className="flex-1 w-full">
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                Nouveau mot de passe
+              </label>
+              <input
+                type="password"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all"
+                placeholder="••••••••"
+                minLength={6}
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={resetting}
+              className="px-5 py-2.5 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition-colors disabled:opacity-50 shrink-0"
+            >
+              {resetting ? t('common.loading') : 'Réinitialiser'}
+            </button>
+          </form>
+          {resetMsg && (
+            <div className={`mt-3 px-4 py-3 rounded-lg text-sm ${resetMsg.type === 'success' ? 'bg-green-50 border border-green-200 text-green-700' : 'bg-red-50 border border-red-200 text-red-700'}`}>
+              {resetMsg.text}
+            </div>
           )}
         </div>
       </div>

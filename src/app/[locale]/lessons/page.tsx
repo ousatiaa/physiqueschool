@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter, Link } from '@/i18n/navigation';
-import { BookOpen, Clock, ChevronRight, Search } from 'lucide-react';
+import { BookOpen, Clock, ChevronRight, Search, ArrowLeft } from 'lucide-react';
 
 interface User {
   level: string;
@@ -65,6 +65,10 @@ export default function LessonsPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <Link href="/dashboard" className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-medium text-sm mb-4">
+            <ArrowLeft size={16} />
+            {t('dashboard.backToDashboard')}
+          </Link>
           <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
             <BookOpen size={28} className="text-primary-600" />
             {t('lessons.title')}

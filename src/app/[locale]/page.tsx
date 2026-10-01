@@ -2,10 +2,17 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { useEffect, useState } from 'react';
+import { TRACK_LEVEL_CONFIG, type LevelType } from '@/lib/constants';
 import { ArrowRight, BookOpen, Video, FileText, ClipboardList, GraduationCap, Atom } from 'lucide-react';
 
 export default function HomePage() {
   const t = useTranslations();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setIsLoggedIn(Boolean(localStorage.getItem('token')));
+  }, []);
 
   const features = [
     {
@@ -90,10 +97,15 @@ export default function HomePage() {
     },
   ];
 
-  const levels = [
-    { name: 'Collège', count: '3', sub: 'niveaux' },
-    { name: 'Lycée', count: '6', sub: 'niveaux' },
-  ];
+  const trackExplorer = TRACK_LEVEL_CONFIG.map((tr) => ({
+    track: tr.track,
+    trackNameFr: tr.trackNameFr,
+    levels: tr.levels.map((lev) => ({
+      id: lev.id as LevelType,
+      code: lev.code,
+      nameFr: lev.nameFr,
+    })),
+  }));
 
   return (
     <div className="min-h-screen">
@@ -139,14 +151,28 @@ export default function HomePage() {
               Choisissez votre niveau et commencez à apprendre
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {levels.map((level, i) => (
-              <div key={i} className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all">
-                <GraduationCap size={48} className="mx-auto text-primary-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{level.name}</h3>
-                <p className="text-gray-500">
-                  {level.count} {level.sub}
-                </p>
+          <div className="space-y-8 max-w-4xl mx-auto">
+            {trackExplorer.map((tr) => (
+              <div key={tr.track}>
+                <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+                  <GraduationCap size={20} className="text-primary-600" />
+                  {tr.trackNameFr}
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {tr.levels.map((lev) => (
+                    <div key={lev.id} className="bg-gray-50 rounded-2xl p-6 text-center border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">
+                        {lev.nameFr}
+                      </h3>
+                      <Link
+                        href={isLoggedIn ? `/levels/${lev.id}` : '/auth/register'}
+                        className="inline-block mt-3 bg-primary-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-primary-700 transition-colors"
+                      >
+                        {t('common.open')}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

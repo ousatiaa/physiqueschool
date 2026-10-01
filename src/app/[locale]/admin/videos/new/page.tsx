@@ -14,7 +14,7 @@ export default function NewVideoPage() {
   const [error, setError] = useState('');
   const [form, setForm] = useState({
     title: '', titleFr: '', description: '', descriptionFr: '',
-    url: '', thumbnail: '', level: '', track: '', duration: 0,
+    url: '', thumbnail: '', level: '', track: '', chapter: '', chapterFr: '', duration: 0,
   });
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function NewVideoPage() {
       const res = await fetch('/api/videos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-        body: JSON.stringify({ ...form, duration: Number(form.duration) }),
+        body: JSON.stringify({ ...form, chapter: form.chapterFr, duration: Number(form.duration) }),
       });
       if (!res.ok) throw new Error('Failed');
       router.push('/admin/videos');
@@ -89,6 +89,11 @@ export default function NewVideoPage() {
               <label className="block text-sm font-medium text-gray-700 mb-1.5">Title (FR)</label>
               <input name="titleFr" value={form.titleFr} onChange={handleChange} className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-500 outline-none" required />
             </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">Chapitre</label>
+            <input name="chapterFr" value={form.chapterFr} onChange={handleChange} className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="Ex: Chapitre 1" />
           </div>
 
           <div>

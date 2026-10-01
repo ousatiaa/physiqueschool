@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname, Link } from '@/i18n/navigation';
 import { TRACK_LEVEL_CONFIG, getLevelConfig, type LevelType } from '@/lib/constants';
-import { BookOpen, Video, FileText, ClipboardList, Menu, X, LogOut, User } from 'lucide-react';
+import { BookOpen, Video, FileText, ClipboardList, Menu, X, LogOut, User, ChevronDown } from 'lucide-react';
 
 interface User {
   id: string;
@@ -22,6 +22,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [user, setUser] = useState<User | null>(null);
+  const [isLevelMenuOpen, setIsLevelMenuOpen] = useState(false);
+  const levelMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const stored = localStorage.getItem('user');
@@ -32,7 +34,19 @@ export default function Navbar() {
         localStorage.removeItem('user');
       }
     }
-  }, []);
+  }, [pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (levelMenuRef.current && !levelMenuRef.current.contains(e.target as Node)) {
+        setIsLevelMenuOpen(false);
+      }
+    };
+    if (isLevelMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [isLevelMenuOpen]);
 
   const handleLogout = async () => {
     try {
@@ -90,11 +104,59 @@ export default function Navbar() {
               <div className="hidden md:flex items-center gap-2">
                 <div className="text-right text-sm">
                   <div className="font-medium">{user.fullName}</div>
-                  <div className="text-xs text-white/70">{levelName}</div>
+                  {user.role === 'admin' ? (
+                    <div className="relative" ref={levelMenuRef}>
+                      <button
+                        onClick={() => setIsLevelMenuOpen(!isLevelMenuOpen)}
+                        className="inline-flex items-center gap-1 text-xs text-white/70 hover:text-white transition-colors"
+                      >
+                        {levelName}
+                        <ChevronDown size={14} />
+                      </button>
+                      {isLevelMenuOpen && (
+                        <div className="absolute right-0 mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 z-50">
+                          {TRACK_LEVEL_CONFIG.map((tr) => (
+                            <div key={tr.track} className="mb-3 last:mb-0">
+                              <p className="text-xs font-bold text-gray-500 uppercase px-2 mb-1">{tr.trackNameFr}</p>
+                              <div className="grid grid-cols-3 gap-1">
+                                {tr.levels.map((lev) => (
+                                  <Link
+                                    key={lev.id}
+                                    href={`/levels/${lev.id}`}
+                                    onClick={() => setIsLevelMenuOpen(false)}
+                                    className={`px-2 py-1.5 rounded-lg text-xs font-semibold text-center transition-colors ${
+                                      user.level === lev.id
+                                        ? 'bg-primary-600 text-white'
+                                        : 'text-gray-700 hover:bg-primary-50 hover:text-primary-700'
+                                    }`}
+                                  >
+                                    {lev.code}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    levelName && (
+                      <Link
+                        href={`/levels/${user.level}`}
+                        className="text-xs text-white/70 hover:text-white hover:underline transition-colors"
+                      >
+                        {levelName}
+                      </Link>
+                    )
+                  )}
                 </div>
-                <div className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center">
+                <Link
+                  href="/profile"
+                  title={t('common.profile')}
+                  className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                >
                   <User size={18} />
-                </div>
+                </Link>
                 {user.role === 'admin' && (
                   <Link
                     href="/admin"
@@ -157,7 +219,15 @@ export default function Navbar() {
                 <>
                   <div className="px-3 py-2 text-sm">
                     <div className="font-medium">{user.fullName}</div>
-                    <div className="text-xs text-white/70">{levelName}</div>
+                    {levelName && (
+                      <Link
+                        href={`/levels/${user.level}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-xs text-white/70 hover:text-white hover:underline"
+                      >
+                        {levelName}
+                      </Link>
+                    )}
                   </div>
                   {user.role === 'admin' && (
                     <Link
@@ -168,6 +238,14 @@ export default function Navbar() {
                       {t('common.admin')}
                     </Link>
                   )}
+                  <Link
+                    href="/profile"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm w-full hover:bg-white/10"
+                  >
+                    <User size={18} />
+                    {t('common.profile')}
+                  </Link>
                   <button
                     onClick={handleLogout}
                     className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm w-full hover:bg-white/10"

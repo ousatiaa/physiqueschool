@@ -56,16 +56,24 @@ export default function LessonDetailPage({ params }: { params: { id: string } })
   if (loading) return <div className="min-h-screen flex items-center justify-center">{t('common.loading')}</div>;
   if (!lesson) return <div className="min-h-screen flex items-center justify-center text-gray-500">{t('common.noContent')}</div>;
 
+  const goBack = () => {
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push('/lessons');
+    }
+  };
+
   const content = lesson.contentFr;
 
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white border-b">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <Link href="/lessons" className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 mb-4 text-sm">
+          <button onClick={goBack} className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 mb-4 text-sm">
             <ArrowLeft size={16} />
             {t('common.back')}
-          </Link>
+          </button>
           <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
             <BookOpen size={16} />
             <span>{t('lessons.chapter')} {lesson.chapterNumber}: {lesson.chapterFr}</span>

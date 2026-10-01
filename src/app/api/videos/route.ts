@@ -7,10 +7,12 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const level = searchParams.get('level');
     const track = searchParams.get('track');
+    const chapter = searchParams.get('chapter');
 
     const filter: Record<string, string> = {};
     if (level) filter.level = level;
     if (track) filter.track = track;
+    if (chapter) filter.chapter = chapter;
 
     let data = await videos.find(filter);
 
