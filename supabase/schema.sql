@@ -9,9 +9,13 @@ CREATE TABLE IF NOT EXISTS public.users (
   track text NOT NULL DEFAULT 'physique',
   level text NOT NULL DEFAULT '1ac',
   role text NOT NULL DEFAULT 'student',
+  approved boolean DEFAULT false,
   "createdAt" text,
   "updatedAt" text
 );
+
+-- Ajout rétroactif (si la table existait déjà sans ce champ)
+ALTER TABLE public.users ADD COLUMN IF NOT EXISTS approved boolean DEFAULT false;
 
 CREATE TABLE IF NOT EXISTS public.lessons (
   _id text PRIMARY KEY,

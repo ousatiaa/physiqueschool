@@ -22,6 +22,7 @@ export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [registered, setRegistered] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -69,9 +70,8 @@ export default function RegisterPage() {
         return;
       }
 
-      localStorage.setItem('user', JSON.stringify(data.user));
-      localStorage.setItem('token', data.token);
-      router.push('/dashboard');
+      setRegistered(true);
+      setLoading(false);
     } catch {
       setError(t('auth.error'));
       setLoading(false);
@@ -88,12 +88,34 @@ export default function RegisterPage() {
             <Atom size={32} className="text-white" />
             <h1 className="text-2xl font-bold text-white">Physique School</h1>
           </div>
-          <p className="text-white/80 text-sm mt-2">
-            {`Étape ${step} sur 3`}
-          </p>
+          {!registered && (
+            <p className="text-white/80 text-sm mt-2">
+              {`Étape ${step} sur 3`}
+            </p>
+          )}
         </div>
 
         <div className="bg-white rounded-2xl shadow-2xl p-8">
+          {registered ? (
+            <div className="text-center py-4">
+              <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle size={32} />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                {t('auth.registrationSubmitted')}
+              </h2>
+              <p className="text-gray-500 mb-6">
+                {t('auth.awaitingApproval')}
+              </p>
+              <Link
+                href="/auth/login"
+                className="inline-block bg-primary-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-all"
+              >
+                {t('auth.loginButton')}
+              </Link>
+            </div>
+          ) : (
+            <>
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4 text-sm">
               {error}
@@ -316,6 +338,8 @@ export default function RegisterPage() {
                   {loading ? t('common.loading') : t('auth.registerButton')}
                 </button>
               </div>
+            </>
+          )}
             </>
           )}
 

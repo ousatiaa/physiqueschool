@@ -22,6 +22,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
     }
 
+    if (user.role === 'student' && user.approved !== true) {
+      return NextResponse.json(
+        { error: 'Account awaiting admin approval. Please contact your administrator.' },
+        { status: 403 }
+      );
+    }
+
     const token = generateToken({
       userId: user._id!,
       email: user.email,

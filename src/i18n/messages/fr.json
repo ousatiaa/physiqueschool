@@ -38,6 +38,8 @@
     "fullName": "Nom complet",
     "loginButton": "Se connecter",
     "registerButton": "S'inscrire",
+    "registrationSubmitted": "Inscription envoyée",
+    "awaitingApproval": "Votre compte est en attente d'approbation par l'administrateur. Vous pourrez vous connecter dès que votre compte sera activé.",
     "noAccount": "Vous n'avez pas de compte ?",
     "hasAccount": "Vous avez déjà un compte ?",
     "loginHere": "Connectez-vous ici",

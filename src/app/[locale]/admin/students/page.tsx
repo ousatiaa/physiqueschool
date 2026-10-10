@@ -13,6 +13,7 @@ interface Student {
   track: string;
   level: string;
   role: string;
+  approved?: boolean;
   createdAt: string;
 }
 
@@ -106,6 +107,22 @@ export default function AdminStudentsPage() {
     return matchSearch && matchLevel && matchTrack;
   });
 
+  const pending = filtered.filter((s) => s.approved !== true);
+
+  const handleApproval = async (id: string, approved: boolean) => {
+    const token = localStorage.getItem('token');
+    try {
+      const res = await fetch(`/api/users/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+        body: JSON.stringify({ approved }),
+      });
+      if (res.ok) {
+        setStudents((prev) => prev.map((s) => (s._id === id ? { ...s, approved } : s)));
+      }
+    } catch {}
+  };
+
   const getProgressPercent = (p?: StudentProgress) => {
     if (!p) return 0;
     const total = p.totalLessons + p.totalExercises + p.totalHomework + p.totalVideos;
@@ -156,6 +173,46 @@ export default function AdminStudentsPage() {
           </select>
         </div>
 
+        {pending.length > 0 && (
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-6">
+            <h2 className="text-lg font-bold text-amber-800 flex items-center gap-2 mb-4">
+              <X size={20} /> Demandes d'inscription en attente ({pending.length})
+            </h2>
+            <div className="space-y-3">
+              {pending.map((s) => {
+                const levelConfig = getLevelConfig(s.level as any);
+                return (
+                  <div key={s._id} className="bg-white rounded-xl border border-amber-200 p-4 flex items-center gap-4">
+                    <div className="w-10 h-10 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold shrink-0">
+                      {s.fullName.charAt(0)}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-semibold text-gray-800 truncate">{s.fullName}</div>
+                      <div className="text-sm text-gray-500 truncate">
+                        {s.email} · {levelConfig ? levelConfig.nameFr : s.level}
+                      </div>
+                    </div>
+                    <div className="flex gap-2 shrink-0">
+                      <button
+                        onClick={() => handleApproval(s._id, true)}
+                        className="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-semibold hover:bg-green-700 transition-colors"
+                      >
+                        Approuver
+                      </button>
+                      <button
+                        onClick={() => setDeleteTarget(s)}
+                        className="px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors"
+                      >
+                        Refuser
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {loading ? (
           <div className="text-center py-12 text-gray-500">{t('common.loading')}</div>
         ) : filtered.length === 0 ? (
@@ -186,6 +243,11 @@ export default function AdminStudentsPage() {
                           <span className="text-xs bg-primary-50 text-primary-700 px-2 py-0.5 rounded-full">
                             {levelConfig ? levelConfig.nameFr : student.level}
                           </span>
+                          {student.approved !== true && (
+                            <span className="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-semibold">
+                              En attente
+                            </span>
+                          )}
                         </div>
                         <p className="text-sm text-gray-500 truncate">{student.email}</p>
                       </div>

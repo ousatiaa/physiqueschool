@@ -17,7 +17,11 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
     }
 
     const body = await request.json();
-    const user = await users.update(params.id, { track: body.track, level: body.level });
+    const user = await users.update(params.id, {
+      track: body.track,
+      level: body.level,
+      approved: body.approved,
+    });
 
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });

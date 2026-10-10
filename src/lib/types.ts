@@ -6,6 +6,7 @@ export interface User {
   track: string;
   level: string;
   role: 'student' | 'admin';
+  approved?: boolean;
   createdAt?: string;
   updatedAt?: string;
 }
