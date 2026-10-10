@@ -23,6 +23,8 @@ export async function GET(request: NextRequest) {
     console.log(
       '[/api/users] configured=', isSupabaseConfigured,
       'url=', process.env.NEXT_PUBLIC_SUPABASE_URL,
+      'svcTail=', (process.env.SUPABASE_SERVICE_ROLE_KEY || '').slice(-12),
+      'anon4=', (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').slice(0, 7),
       'hasService=', Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY),
       'findCount=', allUsers.length,
       'rawCount=', rawCount,
