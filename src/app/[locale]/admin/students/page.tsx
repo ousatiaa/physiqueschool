@@ -41,6 +41,7 @@ export default function AdminStudentsPage() {
   const [filterTrack, setFilterTrack] = useState('');
   const [deleteTarget, setDeleteTarget] = useState<Student | null>(null);
   const [deleting, setDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
 
   const fetchStudents = () => {
     const token = localStorage.getItem('token');
@@ -86,6 +87,7 @@ export default function AdminStudentsPage() {
   const handleDelete = async () => {
     if (!deleteTarget) return;
     setDeleting(true);
+    setDeleteError(null);
     const token = localStorage.getItem('token');
     try {
       const res = await fetch(`/api/users/${deleteTarget._id}`, {
@@ -95,8 +97,20 @@ export default function AdminStudentsPage() {
       if (res.ok) {
         setStudents((prev) => prev.filter((s) => s._id !== deleteTarget._id));
         setDeleteTarget(null);
+      } else if (res.status === 404) {
+        setStudents((prev) => prev.filter((s) => s._id !== deleteTarget._id));
+        setDeleteTarget(null);
+      } else if (res.status === 401) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        router.push('/auth/login');
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setDeleteError(data.error || 'Une erreur est survenue.');
       }
-    } catch {}
+    } catch {
+      setDeleteError('Une erreur est survenue. Réessayez.');
+    }
     setDeleting(false);
   };
 
@@ -307,9 +321,12 @@ export default function AdminStudentsPage() {
                 <br />Cette action est irréversible.
               </p>
             </div>
+            {deleteError && (
+              <p className="text-sm text-red-600 bg-red-50 rounded-xl p-3 mb-4">{deleteError}</p>
+            )}
             <div className="flex gap-3">
               <button
-                onClick={() => setDeleteTarget(null)}
+                onClick={() => { setDeleteTarget(null); setDeleteError(null); }}
                 className="flex-1 py-2.5 border border-gray-300 rounded-xl font-medium hover:bg-gray-50 transition-colors"
               >
                 Annuler
