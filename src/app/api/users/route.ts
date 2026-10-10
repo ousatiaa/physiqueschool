@@ -13,9 +13,12 @@ export async function GET(request: NextRequest) {
     const allUsers = await users.find({});
 
     let rawCount = -1;
+    let raw2Count = -1;
     try {
-      const { data: raw } = await getSupabase().from('users').select('*');
+      const { data: raw } = await getSupabase().from('users').select('*').limit(1000).order('createdAt');
       rawCount = (raw ?? []).length;
+      const { data: raw2, error: raw2Err } = await getSupabase().from('users').select('email, _id');
+      raw2Count = raw2Err ? -1 : (raw2 ?? []).length;
     } catch (e: any) {
       rawCount = -2;
     }
@@ -28,6 +31,7 @@ export async function GET(request: NextRequest) {
       'hasService=', Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY),
       'findCount=', allUsers.length,
       'rawCount=', rawCount,
+      'raw2Count=', raw2Count,
       'emails=', allUsers.map((u: any) => u.email).join('|')
     );
 
