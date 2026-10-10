@@ -104,6 +104,14 @@ CREATE TABLE IF NOT EXISTS public.progress (
   "updatedAt" text
 );
 
+CREATE TABLE IF NOT EXISTS public.whitelist (
+  _id text PRIMARY KEY,
+  level text NOT NULL,
+  name text NOT NULL,
+  "createdAt" text,
+  "updatedAt" text
+);
+
 -- Permissions : tout est géré par le service role / anon via les clés API
 ALTER TABLE public.users ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.lessons ENABLE ROW LEVEL SECURITY;
@@ -111,6 +119,7 @@ ALTER TABLE public.videos ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.exercises ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.homework ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.progress ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.whitelist ENABLE ROW LEVEL SECURITY;
 
 -- Autoriser lecture/écriture via la clé anon (simple pour ce projet éducatif)
 CREATE POLICY "public read users" ON public.users FOR SELECT USING (true);
@@ -125,3 +134,5 @@ CREATE POLICY "public read homework" ON public.homework FOR SELECT USING (true);
 CREATE POLICY "public write homework" ON public.homework FOR ALL USING (true) WITH CHECK (true);
 CREATE POLICY "public read progress" ON public.progress FOR SELECT USING (true);
 CREATE POLICY "public write progress" ON public.progress FOR ALL USING (true) WITH CHECK (true);
+CREATE POLICY "public read whitelist" ON public.whitelist FOR SELECT USING (true);
+CREATE POLICY "public write whitelist" ON public.whitelist FOR ALL USING (true) WITH CHECK (true);

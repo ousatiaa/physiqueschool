@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, Link } from '@/i18n/navigation';
-import { ArrowLeft, Users, BookOpen, FileText, Video, ClipboardList, Eye, Trash2, X } from 'lucide-react';
+import { ArrowLeft, Users, BookOpen, FileText, Video, ClipboardList, Eye, Trash2, X, UploadCloud, FileSpreadsheet, Trash } from 'lucide-react';
 import { getLevelConfig } from '@/lib/constants';
 
 interface Student {
@@ -42,6 +42,10 @@ export default function AdminStudentsPage() {
   const [deleteTarget, setDeleteTarget] = useState<Student | null>(null);
   const [deleting, setDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
+  const [whitelist, setWhitelist] = useState<Record<string, string[]>>({});
+  const [whitelistLoading, setWhitelistLoading] = useState(true);
+  const [uploading, setUploading] = useState(false);
+  const [uploadMessage, setUploadMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   const fetchStudents = () => {
     const token = localStorage.getItem('token');
@@ -69,7 +73,62 @@ export default function AdminStudentsPage() {
     const userData = JSON.parse(stored);
     if (userData.role !== 'admin') { router.push('/dashboard'); return; }
     fetchStudents();
+    fetchWhitelist();
   }, [router]);
+
+  const fetchWhitelist = () => {
+    const token = localStorage.getItem('token');
+    fetch('/api/admin/whitelist', { headers: { Authorization: `Bearer ${token}` } })
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((data) => setWhitelist(data.perLevel || {}))
+      .catch(() => {})
+      .finally(() => setWhitelistLoading(false));
+  };
+
+  const handleWhitelistUpload = async (file: File) => {
+    if (!file) return;
+    setUploading(true);
+    setUploadMessage(null);
+    const token = localStorage.getItem('token');
+    const formData = new FormData();
+    formData.append('file', file);
+    try {
+      const res = await fetch('/api/admin/whitelist', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${token}` },
+        body: formData,
+      });
+      const data = await res.json();
+      if (res.ok) {
+        const summary = Object.entries(data.perLevel || {})
+          .map(([lvl, count]) => `${lvl.toUpperCase()} (${count})`)
+          .join(', ');
+        setUploadMessage({ type: 'success', text: `${data.imported} noms importés ${summary ? '— ' + summary : ''}` });
+        fetchWhitelist();
+        fetchStudents();
+      } else {
+        setUploadMessage({ type: 'error', text: data.error || 'Upload failed' });
+      }
+    } catch {
+      setUploadMessage({ type: 'error', text: 'Une erreur est survenue' });
+    }
+    setUploading(false);
+  };
+
+  const handleWhitelistClear = async () => {
+    const token = localStorage.getItem('token');
+    try {
+      const res = await fetch('/api/admin/whitelist', {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (res.ok) {
+        setWhitelist({});
+        setUploadMessage({ type: 'success', text: 'Liste des noms effacée' });
+        fetchStudents();
+      }
+    } catch {}
+  };
 
   useEffect(() => {
     if (students.length === 0) return;
@@ -185,6 +244,63 @@ export default function AdminStudentsPage() {
             <option value="2bacsvtf">2BAC SVTF</option>
             <option value="2bacsmf">2BAC SMF</option>
           </select>
+        </div>
+
+        <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-6">
+          <div className="flex items-center gap-2 mb-2">
+            <FileSpreadsheet size={20} className="text-primary-600" />
+            <h2 className="text-lg font-bold text-gray-800">Activation automatique par liste Excel</h2>
+          </div>
+          <p className="text-sm text-gray-500 mb-4">
+            Importez un fichier Excel (colonne A = niveau, exemple « 2AC » / « 1BACSPF », bloc B = nom complet).
+            L&apos;élève dont le nom figure dans la liste de son niveau est activé automatiquement à l&apos;inscription.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+            <label className="flex-1 w-full">
+              <input
+                type="file"
+                accept=".xlsx,.xls"
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (file) handleWhitelistUpload(file);
+                  e.target.value = '';
+                }}
+                className="block w-full text-sm text-gray-600 file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100 cursor-pointer"
+                disabled={uploading}
+              />
+            </label>
+            <button
+              onClick={handleWhitelistClear}
+              disabled={whitelistLoading || Object.keys(whitelist).length === 0}
+              className="flex items-center gap-2 px-4 py-2.5 border border-red-300 text-red-600 rounded-xl text-sm font-semibold hover:bg-red-50 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              <Trash size={16} /> Effacer la liste
+            </button>
+          </div>
+
+          {uploading && <p className="text-sm text-gray-500 mt-3">Importation en cours...</p>}
+          {uploadMessage && (
+            <p className={`text-sm mt-3 ${uploadMessage.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+              {uploadMessage.text}
+            </p>
+          )}
+
+          <div className="mt-4 pt-4 border-t border-gray-100">
+            {whitelistLoading ? (
+              <p className="text-sm text-gray-500">{t('common.loading')}</p>
+            ) : Object.keys(whitelist).length === 0 ? (
+              <p className="text-sm text-gray-400">Aucune liste importée pour le moment.</p>
+            ) : (
+              <div className="flex flex-wrap gap-2">
+                {Object.entries(whitelist).map(([level, names]) => (
+                  <span key={level} className="inline-flex items-center gap-1.5 bg-primary-50 text-primary-700 text-xs font-semibold px-3 py-1.5 rounded-full">
+                    {getLevelConfig(level as any)?.code || level.toUpperCase()} · {names.length} nom{names.length > 1 ? 's' : ''}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {pending.length > 0 && (

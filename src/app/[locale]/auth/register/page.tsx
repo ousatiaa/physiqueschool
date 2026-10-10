@@ -23,6 +23,7 @@ export default function RegisterPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [registered, setRegistered] = useState(false);
+  const [autoApproved, setAutoApproved] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -71,6 +72,7 @@ export default function RegisterPage() {
       }
 
       setRegistered(true);
+      setAutoApproved(!!data.user?.approved);
       setLoading(false);
     } catch {
       setError(t('auth.error'));
@@ -102,10 +104,12 @@ export default function RegisterPage() {
                 <CheckCircle size={32} />
               </div>
               <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                {t('auth.registrationSubmitted')}
+                {autoApproved ? 'Compte activé' : t('auth.registrationSubmitted')}
               </h2>
               <p className="text-gray-500 mb-6">
-                {t('auth.awaitingApproval')}
+                {autoApproved
+                  ? 'Votre nom figure dans la liste de votre niveau. Votre compte est activé, vous pouvez vous connecter maintenant.'
+                  : t('auth.awaitingApproval')}
               </p>
               <Link
                 href="/auth/login"

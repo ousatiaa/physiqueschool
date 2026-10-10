@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { users } from '@/lib/collections';
 import { hashPassword } from '@/lib/auth';
+import { isAutoApproved } from '@/lib/whitelist';
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,6 +17,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Email already exists' }, { status: 409 });
     }
 
+    const approved = await isAutoApproved(fullName, level);
+
     const hashedPassword = await hashPassword(password);
     const user = await users.create({
       email,
@@ -24,12 +27,14 @@ export async function POST(request: NextRequest) {
       track,
       level,
       role: 'student',
-      approved: false,
+      approved,
     });
 
     return NextResponse.json(
       {
-        message: 'Registration submitted. Your account is awaiting admin approval.',
+        message: approved
+          ? 'Registration successful. Your account is activated.'
+          : 'Registration submitted. Your account is awaiting admin approval.',
         user: {
           id: user._id,
           email: user.email,
@@ -37,7 +42,7 @@ export async function POST(request: NextRequest) {
           track: user.track,
           level: user.level,
           role: user.role,
-          approved: false,
+          approved,
         },
       },
       { status: 201 }

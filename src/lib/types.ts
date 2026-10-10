@@ -86,3 +86,11 @@ export interface Homework {
   createdAt?: string;
   updatedAt?: string;
 }
+
+export interface WhitelistEntry {
+  _id?: string;
+  level: string;
+  name: string;
+  createdAt?: string;
+  updatedAt?: string;
+}

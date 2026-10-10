@@ -1,7 +1,7 @@
 import { createCollection } from './db';
 import { createSupabaseCollection } from './supabase-collection';
 import { isSupabaseConfigured } from './supabase';
-import type { User, Lesson, Video, Exercise, Homework } from './types';
+import type { User, Lesson, Video, Exercise, Homework, WhitelistEntry } from './types';
 
 export const users = isSupabaseConfigured
   ? createSupabaseCollection<User>('users')
@@ -26,3 +26,7 @@ export const homework = isSupabaseConfigured
 export const progress = isSupabaseConfigured
   ? createSupabaseCollection<any>('progress')
   : createCollection<any>('progress');
+
+export const whitelist = isSupabaseConfigured
+  ? createSupabaseCollection<WhitelistEntry>('whitelist')
+  : createCollection<WhitelistEntry>('whitelist');
