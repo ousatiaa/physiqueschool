@@ -11,6 +11,7 @@ export async function GET(request: NextRequest) {
 
     const allUsers = await users.find({});
     const safe = allUsers.map(({ password, ...rest }) => rest);
+    console.log('[/api/users] count=', allUsers.length, 'emails=', allUsers.map((u: any) => u.email).join('|'));
     return NextResponse.json(safe);
   } catch (error) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
