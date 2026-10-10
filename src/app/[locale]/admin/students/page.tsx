@@ -176,7 +176,7 @@ export default function AdminStudentsPage() {
         {pending.length > 0 && (
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-6">
             <h2 className="text-lg font-bold text-amber-800 flex items-center gap-2 mb-4">
-              <X size={20} /> Demandes d'inscription en attente ({pending.length})
+              <X size={20} /> Demandes d&apos;inscription en attente ({pending.length})
             </h2>
             <div className="space-y-3">
               {pending.map((s) => {
