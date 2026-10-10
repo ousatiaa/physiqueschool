@@ -30,7 +30,7 @@ export function createSupabaseCollection<T extends { _id?: string }>(
   return {
     async find(filter?: Partial<T>): Promise<T[]> {
       const cleanFilter = normalizeFilter(filter);
-      let query = db().from(table).select('*');
+      let query = db().from(table).select('*').limit(1000);
 
       for (const [key, value] of Object.entries(cleanFilter)) {
         query = query.eq(key, value);
