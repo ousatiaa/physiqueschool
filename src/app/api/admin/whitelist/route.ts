@@ -76,22 +76,42 @@ export async function POST(request: NextRequest) {
     const buffer = Buffer.from(await file.arrayBuffer());
     const entries = parseWorkbook(buffer);
     if (entries.length === 0) {
-      return NextResponse.json({ error: 'Aucun nom valide trouvé dans le fichier. Format attendu : Niveau | Nom...' }, { status: 400 });
+      return NextResponse.json({ error: 'Aucun nom valide trouvé dans le fichier. Format : une feuille par niveau (ex. « 2AC », « 1BACSPF ») avec les noms en colonne A.' }, { status: 400 });
     }
 
+    const byLevel: Record<string, { level: string; name: string }[]> = {};
     for (const entry of entries) {
-      const existing = await whitelist.find({ level: entry.level, name: entry.name });
-      if (existing.length === 0) {
-        await whitelist.create(entry);
+      if (!byLevel[entry.level]) byLevel[entry.level] = [];
+      byLevel[entry.level].push(entry);
+    }
+
+    const removed: Record<string, number> = {};
+    const added: Record<string, number> = {};
+    for (const [level, levelEntries] of Object.entries(byLevel)) {
+      const existing = await whitelist.find({ level });
+
+      const incomingNames = new Set(levelEntries.map((e) => e.name));
+      let removedCount = 0;
+      for (const old of existing) {
+        if (!incomingNames.has(old.name) && old._id) {
+          await whitelist.delete(old._id);
+          removedCount++;
+        }
       }
+      removed[level] = removedCount;
+
+      let addedCount = 0;
+      for (const entry of levelEntries) {
+        const already = existing.some((old) => old.name === entry.name);
+        if (!already) {
+          await whitelist.create(entry);
+          addedCount++;
+        }
+      }
+      added[level] = addedCount;
     }
 
-    const perLevel: Record<string, number> = {};
-    for (const entry of entries) {
-      perLevel[entry.level] = (perLevel[entry.level] || 0) + 1;
-    }
-
-    return NextResponse.json({ imported: entries.length, perLevel }, { status: 201 });
+    return NextResponse.json({ imported: entries.length, perLevel: added, removed }, { status: 201 });
   } catch (error) {
     console.error('Whitelist upload error:', error);
     return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
