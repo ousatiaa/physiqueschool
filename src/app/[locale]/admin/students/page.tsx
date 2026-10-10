@@ -103,13 +103,15 @@ export default function AdminStudentsPage() {
         const summary = Object.entries(data.added || {})
           .map(([lvl, count]) => `${lvl.toUpperCase()} (+${count})`)
           .join(', ');
-        const removedSummary = Object.entries(data.removed || {})
+        const approvedSummary = Object.entries(data.approvedNow || {})
           .filter(([, c]) => Number(c) > 0)
-          .map(([lvl, count]) => `${lvl.toUpperCase()} (-${count})`)
+          .map(([lvl, count]) => `${lvl.toUpperCase()} (${count} élève${Number(count) > 1 ? 's' : ''} activé${Number(count) > 1 ? 's' : ''})`)
           .join(', ');
         setUploadMessage({
           type: 'success',
-          text: `${data.imported} noms traités — ${summary}${removedSummary ? ' · ' + removedSummary : ''}`,
+          text: approvedSummary
+            ? `${approvedSummary} ont été activés automatiquement.`
+            : `${data.imported} noms traités — ${summary}`,
         });
         fetchWhitelist();
         fetchStudents();
@@ -260,8 +262,9 @@ export default function AdminStudentsPage() {
           </div>
           <p className="text-sm text-gray-500 mb-4">
             Un seul fichier Excel, plusieurs feuilles (feuille par niveau). Nommez chaque feuille par le niveau
-            (ex. « 2AC », « 1BACSPF ») et mettez les noms complets dans la colonne A. À chaque nouvelle importation,
-            la liste de chaque niveau est mise à jour automatiquement (les noms retirés sont supprimés, les nouveaux ajoutés).
+            (ex. « 2AC », « 1BACSPF ») et mettez les noms complets dans la colonne A. À chaque importation, la liste est
+            synchronisée et tous les élèves déjà inscrits dont le nom figure dans la liste de leur niveau sont
+            activés automatiquement (une fois activés, ils le restent).
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">

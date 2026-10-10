@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import * as XLSX from 'xlsx';
-import { whitelist } from '@/lib/collections';
+import { users, whitelist } from '@/lib/collections';
 import { verifyToken } from '@/lib/auth';
-import { normalizeLevelInput, normalizeName } from '@/lib/whitelist';
+import { normalizeLevelInput, normalizeName, namesMatch } from '@/lib/whitelist';
 
 function parseWorkbook(buffer: Buffer): { level: string; name: string }[] {
   const workbook = XLSX.read(buffer, { type: 'buffer' });
@@ -111,7 +111,23 @@ export async function POST(request: NextRequest) {
       added[level] = addedCount;
     }
 
-    return NextResponse.json({ imported: entries.length, perLevel: added, removed }, { status: 201 });
+    const approvedNow: Record<string, number> = {};
+    for (const [level, levelEntries] of Object.entries(byLevel)) {
+      const names = levelEntries.map((e) => e.name);
+      const students = await users.find({ level });
+      let approvedCount = 0;
+      for (const student of students) {
+        if (student.approved === true || student.role !== 'student') continue;
+        if (!student._id) continue;
+        if (names.some((n) => namesMatch(n, student.fullName))) {
+          await users.update(student._id, { approved: true } as any);
+          approvedCount++;
+        }
+      }
+      approvedNow[level] = approvedCount;
+    }
+
+    return NextResponse.json({ imported: entries.length, perLevel: added, removed, approvedNow }, { status: 201 });
   } catch (error) {
     console.error('Whitelist upload error:', error);
     return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
