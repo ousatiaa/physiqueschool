@@ -11,12 +11,18 @@ export function normalizeName(name: string): string {
     .trim();
 }
 
+const LEVEL_ALIASES: Record<string, string> = {
+  '2BACSPCF': '2BACSPF',
+  '2BACSPFC': '2BACSPF',
+};
+
 export function normalizeLevelInput(raw: string): string | null {
   const cleaned = raw.trim();
   const upper = cleaned.toUpperCase().replace(/[^A-Z0-9]/g, '');
   for (const [key, value] of Object.entries(LEVELS)) {
     if (key.replace(/[^A-Z0-9]/g, '') === upper) return value;
   }
+  if (LEVEL_ALIASES[upper]) return LEVEL_ALIASES[upper].toLowerCase();
   return null;
 }
 

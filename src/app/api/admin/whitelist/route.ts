@@ -38,10 +38,21 @@ function parseWorkbook(buffer: Buffer): { level: string; name: string }[] {
         const level = hasLevelCol ? normalizeLevelInput(cells[levelIdx]) : sheetLevel;
         addEntry(level, cells[nameIdx]);
       }
-    } else if (sheetLevel) {
-      for (const row of rows) {
-        const cells = rowCells(row);
-        addEntry(sheetLevel, cells[0]);
+    } else if (sheetLevel && !hasLevelCol) {
+      const first = rowCells(rows[0]);
+      const firstLevel = normalizeLevelInput(first[0]);
+      const twoCol = first.length >= 2 && (firstLevel !== null || String(first[0]).toUpperCase() === sheetName.toUpperCase());
+      if (twoCol) {
+        for (const row of rows) {
+          const cells = rowCells(row);
+          const level = normalizeLevelInput(cells[0]) ?? sheetLevel;
+          addEntry(level, cells[1]);
+        }
+      } else {
+        for (const row of rows) {
+          const cells = rowCells(row);
+          addEntry(sheetLevel, cells[0]);
+        }
       }
     } else {
       for (const row of rows) {
