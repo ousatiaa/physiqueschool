@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyToken } from '@/lib/auth';
+import { getSupabase } from '@/lib/supabase';
+
+const BUCKET = 'uploads';
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,12 +15,27 @@ export async function POST(request: NextRequest) {
     const file = formData.get('file') as File;
     if (!file) return NextResponse.json({ error: 'No file provided' }, { status: 400 });
 
-    const buffer = Buffer.from(await file.arrayBuffer());
-    const base64 = buffer.toString('base64');
-    const mimeType = file.type || 'application/octet-stream';
-    const dataUrl = `data:${mimeType};base64,${base64}`;
+    if (!file.type.startsWith('image/')) {
+      return NextResponse.json({ error: 'Only image files are allowed' }, { status: 400 });
+    }
 
-    return NextResponse.json({ url: dataUrl, filename: file.name }, { status: 201 });
+    const buffer = Buffer.from(await file.arrayBuffer());
+    const ext = file.name.includes('.') ? file.name.split('.').pop() : '';
+    const safeExt = (ext || 'bin').replace(/[^a-zA-Z0-9]/g, '').slice(0, 8).toLowerCase();
+    const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${safeExt}`;
+
+    const supabase = getSupabase();
+    const { error } = await supabase.storage
+      .from(BUCKET)
+      .upload(filename, buffer, { contentType: file.type, upsert: false });
+    if (error) {
+      console.error('Storage upload error:', error);
+      return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
+    }
+
+    const { data: pub } = supabase.storage.from(BUCKET).getPublicUrl(filename);
+
+    return NextResponse.json({ url: pub.publicUrl, filename }, { status: 201 });
   } catch (error) {
     console.error('Upload error:', error);
     return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
